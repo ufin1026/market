@@ -8,30 +8,32 @@
     <!-- boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Freckle+Face&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
     <!-- up style -->
     <link rel="stylesheet" href="style.css">
     <!-- style -->
     <style>
-        /* 123456789 */
         .wp-title {
             color: #FF2181;
             letter-spacing: 20px;
         }
 
         .wp-img {
-            padding: 30px;
+            width: 100%;
+            padding: 30px 5px;
 
         }
 
+        /* 繪圖設計 */
         .wp-design {
             color: #FF98C9;
         }
 
-        .wp-design-originStyle {
-            /* 123 */
+        .wp-originStyle {
             border-radius: 150px;
             width: 40px;
             height: 600px;
@@ -45,6 +47,7 @@
             transition: .8s;
         }
 
+        /* 文書處理 */
         .wp-document {
             color: #A388FF;
         }
@@ -57,11 +60,12 @@
             transition: .5s;
         }
 
-        .wp-movie {
+        /* 影音剪輯 */
+        .wp-editing {
             color: #7AE09C;
         }
 
-        .wp-movie-hover:hover {
+        .wp-editing-hover:hover {
             background-color: #7AE09C30;
             border-radius: 150px;
             width: 40px;
@@ -69,6 +73,7 @@
             transition: .5s;
         }
 
+        /* 電競遊戲 */
         .wp-gaming {
             color: #43D3FD;
         }
@@ -93,21 +98,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-sm-6 wp-img text-center wp-design wp-design-hover wp-design-originStyle">
-                <img src="./images/design.svg" alt="">
-                <h2 class="wp-design">
-                    平面設計
-                </h2>
-                <h5 class="wp-design">
-                    Photoshop<br>
-                    Illustrator<br>
-                    Indesign<br>
-                    Lightroom<br>
-                    CorelDRAW
-                </h5>
-            </div>
-            <div class="col-lg-3 col-sm-6 wp-img text-center wp-document wp-document-hover wp-design-originStyle">
-                <img src="./images/document.svg" alt="">
+            <div class="col-lg-3 col-sm-6 text-center wp-document wp-document-hover wp-originStyle">
+                <div class="wp-img">
+                    <img src="./images/document.svg" alt="">
+                </div>
+
                 <h2 class="wp-document">
                     文書處理
                 </h2>
@@ -117,12 +112,31 @@
                     PowerPoint
                 </h5>
             </div>
-            <div class="col-lg-3 col-sm-6 wp-img text-center wp-movie wp-movie-hover wp-design-originStyle">
-                <img src="./images/movie.svg" alt="">
-                <h2 class="wp-movie">
+            <div class="col-lg-3 col-sm-6 text-center wp-design wp-design-hover wp-originStyle">
+                <div class="wp-img">
+                    <img src="./images/design.svg" alt="">
+                </div>
+                <h2 class="wp-design">
+                    繪圖設計
+                </h2>
+                <h5 class="wp-design">
+                    Photoshop<br>
+                    Illustrator<br>
+                    Indesign<br>
+                    Lightroom<br>
+                    CorelDRAW
+                </h5>
+            </div>
+
+            <div class="col-lg-3 col-sm-6 text-center wp-editing wp-editing-hover wp-originStyle">
+                <div class="wp-img">
+                    <img src="./images/editing.svg" alt="">
+                </div>
+
+                <h2 class="wp-editing">
                     影片剪輯
                 </h2>
-                <h5 class="wp-movie">
+                <h5 class="wp-editing">
                     Premiere<br>
                     Final cut 7<br>
                     Avid composer<br>
@@ -130,8 +144,10 @@
                     Edius
                 </h5>
             </div>
-            <div class="col-lg-3 col-sm-6 wp-img text-center wp-gaming wp-gaming-hover wp-design-originStyle">
-                <img src="./images/gaming.svg" alt="">
+            <div class="col-lg-3 col-sm-6 text-center wp-gaming wp-gaming-hover wp-originStyle">
+                <div class="wp-img">
+                    <img src="./images/gaming.svg" alt="">
+                </div>
                 <h2 class="wp-gaming">
                     遊戲電競
                 </h2>
