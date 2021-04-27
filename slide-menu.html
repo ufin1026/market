@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
+    <!-- up style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- style -->
+    <style>
+        .nav-slider {
+            background-color: #061127;
+        }
+
+        .mobile_close,
+        .mobile_open {
+            display: inline-block;
+            font-size: 16px;
+            padding: 1px;
+            color: #01FFC3;
+            line-height: 50px;
+        }
+
+        .mobile_open {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile_open {
+                display: inline-block;
+            }
+        }
+
+        .fas {
+            padding: 1em;
+        }
+
+        .aside {
+            overflow: hidden;
+            width: 270px;
+            background-color: #333;
+            transform: translateX(-270px);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .aside {
+                display: block;
+                border-right: 3px solid #ffbe0b;
+                transition: all 0.5s;
+            }
+
+            .aside li {
+                margin: 1em;
+            }
+
+            .aside li a {
+                display: block;
+                color: #ffbe0b;
+                border-bottom: 1px dashed #ffbe0b;
+                padding: 1em;
+            }
+
+            .aside li a:hover {
+                background-color: #ffbe0b;
+                color: #333;
+                transition: 0.3s;
+            }
+        }
+
+        .main {
+            transform: translateX(0px);
+            transition: all 0.5s;
+        }
+
+        .header {
+            background-color: #333;
+            height: 50px;
+            border-bottom: 3px solid #ffbe0b;
+        }
+
+        .header .menu {
+            float: right;
+            margin-right: 1em;
+        }
+
+        .header .menu li {
+            float: left;
+        }
+
+        .header .menu li a {
+            color: #ffbe0b;
+            font-size: 16px;
+            padding-right: 1em;
+            padding-left: 1em;
+            line-height: 50px;
+        }
+
+        .header .menu li a:hover {
+            background-color: #ffbe0b;
+            padding-top: 17px;
+            padding-bottom: 15px;
+            color: #333;
+            transition: all 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .header .menu {
+                display: none;
+                transition: all 0.5s;
+            }
+
+            .header .menu li {
+                float: left;
+            }
+
+            .header .menu li a {
+                display: block;
+                color: #ffbe0b;
+                line-height: 50px;
+                border-bottom: 1px dashed #ffbe0b;
+                transition: all 0.5s;
+            }
+
+            .header .menu li a:hover {
+                background-color: #ffbe0b;
+                color: #333;
+            }
+        }
+
+        .open .main {
+            transform: translateX(270px);
+            transition: all 0.5s;
+        }
+
+        .open .aside {
+            transform: translateX(0);
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="aside">
+            <a href="#" class="mobile_close"><i class="fas fa-window-close"></i></a>
+            <!-- 作為關閉選單用 -->
+            <ul class="aside_menu">
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">商場</a></li>
+                <li><a href="#">WePick</a></li>
+                <li><a href="#">UPick</a></li>
+                <li><a href="#">會員中心</a></li>
+                <li><a href="#">登入</a></li>
+            </ul>
+        </div>
+        <!-- aside end -->
+
+        <div class="main">
+            <!-- PC 顯示的目錄 -->
+            <div class="header">
+                <a href="#" class="mobile_open"><i class="fas fa-bars"></i></a>
+                <!-- 作為手機版的側邊選單按鈕 -->
+                <ul class="menu">
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">商場</a></li>
+                    <li><a href="#">WePick</a></li>
+                    <li><a href="#">UPick</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>期間令人，在這另外。</h2>
+                <p>就好隨意崇拜也在幾天專業上去材料不但禁止同時沒想到恐怖，本類告知體驗一週不在味道資料庫富岡包裝，和平上一頁，西部貨幣激烈國人採訪兒童取得反映衛生著名充分寂寞都有承擔，教程少女政策涉及出版社出來職務臺中太多規定各自我都還不，預計顏色未經出去城市，規格落實個。
+                </p>
+                <h2>期間令人，在這另外。</h2>
+                <p>就好隨意崇拜也在幾天專業上去材料不但禁止同時沒想到恐怖，本類告知體驗一週不在味道資料庫富岡包裝，和平上一頁，西部貨幣激烈國人採訪兒童取得反映衛生著名充分寂寞都有承擔，教程少女政策涉及出版社出來職務臺中太多規定各自我都還不，預計顏色未經出去城市，規格落實個。
+                </p>
+                <h2>期間令人，在這另外。</h2>
+                <p>就好隨意崇拜也在幾天專業上去材料不但禁止同時沒想到恐怖，本類告知體驗一週不在味道資料庫富岡包裝，和平上一頁，西部貨幣激烈國人採訪兒童取得反映衛生著名充分寂寞都有承擔，教程少女政策涉及出版社出來職務臺中太多規定各自我都還不，預計顏色未經出去城市，規格落實個。
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.mobile_open').click(function (e) {
+                $('body').addClass('open');
+                // 用 click 監聽 .mobile_open，當 click 觸發功能，會把 body 中的側邊選單打開       
+            });
+
+            $('.mobile_close').click(function (e) {
+                $('body').removeClass('open')
+                //用 click 監聽 .mobile_close，當 click 觸發功能，會把 body 中的側邊選單關閉
+
+            });
+        });
+
+//使用 JS 增加 class 名稱，不需要加上 .class
+    </script>
+
+    </div>
+</body>
+
+</html>
