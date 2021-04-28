@@ -11,46 +11,49 @@
     <!-- google font 'Freckle Face', cursive-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Freckle+Face&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
     <!-- up style -->
     <link rel="stylesheet" href="style.css">
+    <!-- wp.css -->
+    <link rel="stylesheet" href="./wp.css">
     <!-- style -->
     <style>
-        .wp-img {
-            width: 100%;
-            padding: 30px 15px;
+        .wp-button:hover {
+            background-color: #43D3FD;
         }
-
-        .wp-gaming {
-            color: #43D3FD;
-        }
-
-        /* .wp-gaming-hover {
-            background-color: #43D3FD30;
-            border-radius: 150px;
-            width: 40px;
-            height: 600px;
-            transition: .5s;
-        } */
     </style>
 </head>
 
 <body>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mx-auto  container">
+        <div class="wp-bg wp-gaming ">
+            <span>gaming</span>
+            <img src="./icon/gaming.svg" alt="">
+        </div>
 
+        <div class="wp-bg-img wp-gaming ">
 
-        <div class="col-lg-3 col-sm-6 text-center wp-gaming wp-gaming-hover wp-originStyle">
+        </div>
+        <div class="text-center wp-gaming wp-index">
             <div class="wp-img">
                 <img src="./images/gaming.svg" alt="">
             </div>
-            <h2 class="wp-gaming">
-                遊戲電競
+            <h2 class="wp-gaming ">
+                繪圖設計
             </h2>
+            <div class="mx-auto wp-gaming wp-button-group">
+                <button class="wp-button wp-gaming">一鍵組機</button>
 
+                <button class="wp-button wp-gaming">自選品牌</button>
+            </div>
         </div>
 
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

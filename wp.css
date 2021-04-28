@@ -1,6 +1,25 @@
 .container {
     overflow: hidden;
 }
+/* 繪圖設計 */
+.wp-design {
+    color: #FF98C9;
+}
+
+/* 文書處理 */
+.wp-document {
+    color: #A388FF;
+}
+
+/* 影音剪輯 */
+.wp-editing {
+    color: #7AE09C;
+}
+
+/* 電競遊戲 */
+.wp-gaming {
+    color: #43D3FD;
+}
 
 .wp-img {
     width: 100%;
@@ -40,20 +59,23 @@
 .wp-bg {
     font-size: 200px;
     font-family: 'Freckle Face', cursive;
-    opacity: 20%;
     z-index: -1;
 }
 .wp-bg span{
+    text-transform: uppercase;
     font-size: 200px;
+    opacity: 20%;
     font-family: 'Freckle Face', cursive;
     position: absolute;
     top: 55%;
     left: 5%;
 }
+
 .wp-bg img {
-    width: 33%;
+    height: 70%;
     transform: rotate(20deg);
     position: absolute;
+    opacity: 10%;
     top:20%;
     right: 5%;
 }

@@ -11,47 +11,46 @@
     <!-- google font 'Freckle Face', cursive-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Freckle+Face&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
     <!-- up style -->
     <link rel="stylesheet" href="style.css">
+    <!-- wp.css -->
+    <link rel="stylesheet" href="./wp.css">
     <!-- style -->
     <style>
-        .wp-img {
-            width: 100%;
-            padding: 30px 15px;
-        }
-
-        .wp-document {
-            color: #A388FF;
-        }
-
-        .wp-document-hover:hover {
-            background-color: #A388FF30;
-            border-radius: 150px;
-            width: 40px;
-            height: 600px;
-            transition: .5s;
+        .wp-button:hover {
+            background-color: #A388FF;
         }
     </style>
 </head>
 
 <body>
-    <div class="row justify-content-center">
-        <div class="col-lg-3 col-sm-6 text-center wp-document wp-document-hover wp-originStyle">
+    <div class="row justify-content-center mx-auto  container">
+        <div class="wp-bg wp-document ">
+            <span>document</span>
+            <img src="./icon/document.svg" alt="">
+        </div>
+
+        <div class="wp-bg-img wp-document ">
+
+        </div>
+        <div class="text-center wp-document wp-index">
             <div class="wp-img">
                 <img src="./images/document.svg" alt="">
             </div>
-
-            <h2 class="wp-document">
+            <h2 class="wp-document ">
                 文書處理
             </h2>
-            <h5 class="wp-document">
-                Word<br>
-                Excel<br>
-                PowerPoint
-            </h5>
+            <div class="mx-auto wp-document wp-button-group">
+                <button class="wp-button wp-document">一鍵組機</button>
+
+                <button class="wp-button wp-document">自選品牌</button>
+            </div>
         </div>
+
     </div>
 
 
