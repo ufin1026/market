@@ -1,0 +1,38 @@
+.wp-img {
+    width: 100%;
+    padding: 30px 15px;
+}
+
+.button-group {
+    margin: 20px 0;
+    border: 2px solid;
+    border-radius: 200px;
+    padding: 4px
+}
+
+.wp-button-choose {
+    border-radius: 200px;
+    background-color: #fff;
+    padding: 2px;
+    margin: 0 4px;
+    border: none;
+    transition: .3s;
+}
+
+.wp-button-choose:hover {
+    border-radius: 200px;
+    background-color: #FF98C9;
+    padding: 2px;
+    color: #fff;
+}
+
+.wp-button-choose:focus {
+    outline: none;
+}
+
+.wp-button-choose:visited {
+    border-radius: 200px;
+    background-color: #FF98C9;
+    padding: 2px;
+    color: #fff;
+}
