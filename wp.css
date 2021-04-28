@@ -2,6 +2,9 @@
     width: 100%;
     padding: 30px 15px;
 }
+.wp-index{
+    margin-top: 140px;
+}
 
 .wp-button-group {
     margin: 20px 0;
@@ -42,19 +45,19 @@
     font-size: 200px;
     font-family: 'Freckle Face', cursive;
     opacity: 20%;
+    z-index: -1;
+}
+.wp-bg span{
+    font-size: 200px;
+    font-family: 'Freckle Face', cursive;
     position: absolute;
     top: 55%;
     left: 20px;
-    z-index: -1;
 }
-.wp-bg-img {
+.wp-bg img {
     width: 33%;
-    background-color: #fff;
-    opacity: 20%;
     transform: rotate(20deg);
     position: absolute;
     top:20%;
     right: 20px;
-    z-index: -1;
-
 }
