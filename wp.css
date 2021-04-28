@@ -19,6 +19,7 @@
     margin:4px;
     border: none;
     transition: .3s;
+    font-weight: bold;
 }
 
 .wp-button:hover {
@@ -44,5 +45,16 @@
     position: absolute;
     top: 55%;
     left: 20px;
-    z-index: 0;
+    z-index: -1;
+}
+.wp-bg-img {
+    width: 40%;
+    background-color: #fff;
+    opacity: 20%;
+    transform: rotate(20deg);
+    position: absolute;
+    top:20%;
+    right: 20px;
+    z-index: -1;
+
 }
