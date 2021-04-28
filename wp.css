@@ -3,30 +3,30 @@
     padding: 30px 15px;
 }
 
-.button-group {
+.wp-button-group {
     margin: 20px 0;
     border: 2px solid;
-    border-radius: 200px;
-    padding: 4px
+    border-radius: 150px;
+    width: 300px;
+    background-color: #fff;
 }
 
-.wp-button-choose {
-    border-radius: 200px;
+.wp-button {
+    width: 135px;
+    border-radius: 100px;
     background-color: #fff;
-    padding: 2px;
-    margin: 0 4px;
+    padding: 8px ;
+    margin:4px;
     border: none;
     transition: .3s;
 }
 
-.wp-button-choose:hover {
-    border-radius: 200px;
+.wp-button:hover {
     background-color: #FF98C9;
-    padding: 2px;
     color: #fff;
 }
 
-.wp-button-choose:focus {
+.wp-button:focus {
     outline: none;
 }
 
@@ -35,4 +35,14 @@
     background-color: #FF98C9;
     padding: 2px;
     color: #fff;
+}
+
+.wp-bg {
+    font-size: 200px;
+    font-family: 'Freckle Face', cursive;
+    opacity: 20%;
+    position: absolute;
+    top: 55%;
+    left: 20px;
+    z-index: 0;
 }
