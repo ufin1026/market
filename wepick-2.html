@@ -13,99 +13,11 @@
     <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
     <!-- up style -->
     <link rel="stylesheet" href="style.css">
+    <!-- wp-2.css -->
+    <link rel="stylesheet" href="./wp-2.css">
     <!-- style -->
     <style>
-        /* 物件長寬 */
-        .wp-progressBar {
-            width: 100%;
-            height: 100%;
-            counter-reset: num;
-        }
-
-        /* 清單內外距 */
-        .wp-progressBar ul {
-            margin: 40px auto;
-            padding: 0 0 0 80px;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* 列表項目處理 */
-        .wp-product li {
-            position: relative;
-            list-style-type: none;
-            /* 移除清單預設樣式 */
-            /* 靠左浮動 */
-            width: 10%;
-            /* 項目間距 */
-            color: #7f7f7f;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        /* 圓點處理 */
-        .wp-product li::before {
-            display: block;
-            /* 建立區塊 */
-            width: 16px;
-            /* 區塊大小 */
-            height: 16px;
-            /* 區塊大小 */
-            background-color: #fdd37a;
-            /* 區塊顏色 */
-            border-radius: 50%;
-            /* 區塊圓角 */
-            content: "●";
-            color: white;
-            font-size: 10px;
-            line-height: 15px;
-            /* 上下置中 */
-            text-align: center;
-            /* 水平置中 */
-            margin: 0 0 10px 0;
-            counter-increment: num;
-            content: counter(num);
-        }
-
-        /* 線條處理 */
-        .wp-product li::after {
-            position: absolute;
-            content: "";
-            top: 4px;
-            left: -83%;
-            z-index: -1;
-            border-radius: 4px;
-            /* 讓線條置於圓圈後 */
-            width: 80%;
-            height: 8px;
-            background-color: #FF98C940;
-        }
-
-        /* 第一列不要有線條 */
-        .wp-product li:first-child::after {
-            content: none;
-        }
-
-        .wp-product li:last-child::before {
-            margin-right: none;
-        }
-
-        .wp-product li.active {
-            color: #7f7f7f;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .wp-product li.active:before {
-            color: #ffffff;
-            border-color: #FF98C9;
-            background: #fdd37a;
-        }
-
-        .wp-product li.active+li:after {
-            background-color: #FF98C9;
-        }
-
+        /* 輪播牆 */
         .wp-carousel-product {
             width: 80%;
             margin: 0 auto;
@@ -146,12 +58,12 @@
 
             <div class="col-4"></div>
             <!-- 輪播牆 -->
-            <div class="col-8 wp-carousel">
+            <div class="col-lg-8 col-md-12 wp-carousel">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row wp-carousel-product">
-                                <div class="col-lg-4 "><img src="./images/AMD01.jpg" alt="">
+                                <div class="col-lg-4  "><img src="./images/AMD01.jpg" alt="">
                                     <h5>AMD Athlon™ 3000G</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor

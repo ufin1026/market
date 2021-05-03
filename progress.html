@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        #wp-progressBar {
+            width: 1000px;
+            margin: auto
+        }
+
+        .wp-progress {
+            position: relative;
+            width: 100%;
+            height: 100px;
+        }
+
+        .line {
+            background-color: transparent;
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .item {
+            text-align: center;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background-color: orange;
+        }
+
+        /* 線段 */
+        .item:not(:last-child)::after {
+            position: absolute;
+            content: " ";
+            top: 40%;
+            left: 120%;
+            z-index: -1;
+            border-radius: 4px;
+            background-color: pink;
+            width: 180%;
+            height: 8px;
+        }
+
+        .item .title {
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            padding-top: 30px;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="wp-progressBar" class="wp-progress d-flex flex-wrap justify-content-between align-items-center">
+
+        <div class="line"></div>
+
+        <div class="item rounded-circle bg-primary">
+            <span class="tag">1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+        <div class="item rounded-circle bg-primary">
+            <span class="tag">1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+        <div class="item rounded-circle bg-primary">
+            <span class="tag">1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+        <div class="item rounded-circle bg-primary">
+            <span class="tag">1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+        <div class="item rounded-circle bg-primary">
+            <span class="tag">1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+
+        <div class="item rounded-circle bg-primary">
+            <span>1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+
+        <div class="item rounded-circle bg-primary">
+            <span>1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+
+        <div class="item rounded-circle bg-primary">
+            <span>1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+
+        <div class="item rounded-circle bg-primary">
+            <span>1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+
+        <div class="item rounded-circle bg-warning">
+            <span class="text-white">1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+
+        <div class="item rounded-circle bg-primary">
+            <span>1</span>
+            <div class="title">
+                <span>AAA</span>
+                <br>
+                <span>BBBBBBBB</span>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

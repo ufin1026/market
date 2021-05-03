@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
+    <!-- up style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- style -->
+    <style>
+        /* 繪圖設計 */
+        .wp-design {
+            color: #FF98C9;
+        }
+
+        #wp-progressBar {
+            width: 1000px;
+            margin: auto;
+            padding-top: 120px;
+        }
+
+        .wp-progress {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex: wrap;
+            justify-content: space-between;
+            counter-reset: num;
+        }
+
+        .line {
+            background-color: #FF98C9;
+            opacity: 20%;
+            width: 100%;
+            height: 8px;
+            position: absolute;
+            z-index: -1;
+            border-radius: 4px;
+            transform: translate(0%, 50%);
+        }
+
+
+        .wp-point::before {
+            color: #fff;
+            counter-increment: num;
+            content: counter(num);
+        }
+
+        .wp-point {
+            width: 16px;
+            /* 區塊大小 */
+            height: 16px;
+            /* 區塊大小 */
+            background-color: #fdd37a;
+            /* 區塊顏色 */
+            border-radius: 50%;
+            /* 區塊圓角 */
+            content: "●";
+            font-size: 10px;
+            font-weight: bold;
+            line-height: 15px;
+            /* 上下置中 */
+            text-align: center;
+            /* 水平置中 */
+            margin: 0 0 10px 0;
+        }
+
+
+
+        /* .wp-point:not(:last-child)::after {
+            position: absolute;
+            content: " ";
+            top: 40%;
+            right: 1%;
+            z-index: -1;
+            border-radius: 4px;
+            background-color: pink;
+            width: 8%;
+            height: 8px;
+        }  */
+
+        .wp-point .title {
+            position: absolute;
+            margin-top: 16px;
+            padding: 8px;
+            transform: translateX(-40%);
+            width: 80px;
+            height: 45px;
+            background: #13a3de;
+            color: #fff;
+            border-radius: 15px;
+        }
+
+
+
+
+        .wp-point .title-delta {
+            position: absolute;
+            margin-top: 0;
+            width: 0;
+            height: 0;
+            border: 8px solid;
+            border-color: transparent transparent #13a3de transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <div class="btn btn-warning">上一步</div>
+        <div class="btn btn-primary">下一步</div>
+    </div>
+    <div class="container">
+        <!-- 進度條 -->
+        <div id="wp-progressBar" class="wp-progress">
+            <div class="wp-point">
+                <!-- 對話小尖尖
+                 -->
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>CPU</span>
+                    <br>
+                    <span>中央處理器</span>
+                </div>
+            </div>
+            <div class="wp-point">
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>BOARD</span>
+                    <br>
+                    <span>主機板</span>
+                </div>
+            </div>
+            <div class="wp-point">
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>RAM</span>
+                    <br>
+                    <span>記憶體</span>
+                </div>
+            </div>
+            <div class="wp-point">
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>HDD</span>
+                    <br>
+                    <span>傳統硬碟</span>
+                </div>
+            </div>
+            <div class="wp-point">
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>SSD</span>
+                    <br>
+                    <span>固態硬碟</span>
+                </div>
+            </div>
+            <div class="wp-point">
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>VGA</span>
+                    <br>
+                    <span>顯示卡</span>
+                </div>
+            </div>
+            <div class="wp-point">
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>SHELL</span>
+                    <br>
+                    <span>電腦機殼</span>
+                </div>
+            </div>
+            <div class="wp-point">
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>POWER</span>
+                    <br>
+                    <span>電源供應器</span>
+                </div>
+            </div>
+            <div class="wp-point">
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>FAN</span>
+                    <br>
+                    <span>散熱零件</span>
+                </div>
+            </div>
+            <div class="wp-point">
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>CHART</span>
+                    <br>
+                    <span>結帳</span>
+                </div>
+            </div>
+
+            <div class="line wp-design"></div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
