@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>wepickCPU</title>
     <!-- boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- wp-2.css -->
     <link rel="stylesheet" href="./wp-2.css">
-
+    <link rel="stylesheet" href="./up-color.css">
     <!-- style -->
     <style>
         /* 卡片 */
@@ -136,19 +136,6 @@
         </div>
         <!-- 內容 -->
         <div class="row wp-container d-flex">
-            <!-- 表單 -->
-            <div class="col-lg-4 wp-card">
-                <h5>商品清單</h5>
-                <ul id="menu" class="list-group ">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-
             <!-- 商品選項 -->
             <div class="col-lg-8 d-flex flex-nowrap overflow-hidden">
                 <!-- CPU -->
@@ -452,12 +439,33 @@
                     </div>
                 </div>
             </div>
+            <!-- 表單 -->
+            <div class="col-lg-4 wp-card">
+                <h5>商品清單</h5>
+                <ul id="menu" class="list-group ">
+                    <li class="list-group-item d-flex">
+                        <p class="col-9 my-auto">AMD Athlon™ 3000G</p>
+
+                        <h5 class="price col-3 my-auto">$1000</h5>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <p class="col-9 my-auto">HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2/16</p>
+
+                        <h5 class="price col-3 my-auto">$1000</h5>
+                    </li>
+
+                </ul>
+                <div class="card-body ">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
         </div>
         <!-- 按鍵 -->
         <div class="d-flex justify-content-end">
-            <button class="btn wp-button btn-last wp-design wp-design-bg">上一步</button>
+            <button class="btn wp-button btn-last wp-design-bg">上一步</button>
 
-            <button class="btn wp-button btn-next wp-design wp-design-bg">下一步</button>
+            <button class="btn wp-button btn-next wp-design-bg">下一步</button>
         </div>
     </div>
 
@@ -523,7 +531,7 @@
         // 選擇後新增li
         $('.wp-btn-product').click(function () {
             console.log('hi')
-            $("#menu").append('<li class="list-group-item">Cras justo odio</li>');
+            $("#menu").append('<li class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></li >');
         })
 
     </script>

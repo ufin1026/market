@@ -1,40 +1,3 @@
-.price {
-    color: #FD723C;
-    font-weight: bold;
-}
-/* 繪圖設計 */
-.wp-design {
-    color: #FF98C9;
-}
-.wp-design-bg {
-    background-color:#FF98C9;
-}
-
-
-/* 文書處理 */
-.wp-document {
-    color: #BDAAFF;
-}
-.wp-document-bg {
-    background-color: #BDAAFF;
-}
-
-/* 影音剪輯 */
-.wp-editing {
-    color: #47D5CE;
-}
-.wp-editing-bg {
-    background-color: #47D5CE;
-}
-
-/* 電競遊戲 */
-.wp-gaming {
-    color: #43D3FD;
-}
-.wp-gaming-bg {
-    background-color: #43D3FD;
-}
-
 /* 進度條 */
 #wp-progressBar {
     width: 1000px;
@@ -180,6 +143,7 @@
     margin: 0 auto;
     overflow: hidden;
     display: flex;
+    align-items: center;
 }
 
 .wp-row {
@@ -231,15 +195,15 @@ h5 {
 
 .wp-btn-product {
     width: 80px;
-    border-radius: 80px;
-    background-color: transparent;
+    border-radius: 16px;
+    background-color: #384449;
     padding: 8px;
     margin: 4px;
     border: none;
     transition: .3s;
     font-weight: bold;
     font-size: 14px;
-    color: transparent;
+    color: #fff;
     transition: .5s;
 }
 
