@@ -31,43 +31,45 @@
 <body>
     <div class="container">
         <div class="row ">
-            <div class="card text-center col-lg-4">
-                <div class="card-header">
-                    <ul class="nav nav-tabs card-header-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Active</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="col-lg-4 wp-card">
+                <h5>商品清單</h5>
+                <ul id="menu" class="list-group ">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Cras justo odio</li>
+                </ul>
                 <div class="card-body">
-
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
                 </div>
             </div>
-
-
             <table class="table table-striped col-lg-8">
                 <thead>
                     <tr class="upick-bg 
             ">
                         <th scope="col">品項</th>
                         <th scope="col">商品名稱</th>
-                        <th scope="col">新增</th>
+
                         <th scope="col">商品資訊</th>
                         <th scope="col">單價</th>
                         <th scope="col">數量</th>
                         <th scope="col">小計</th>
-                        <th scope="col">清除</th>
+                        <th scope="col">新增</th>
                     </tr>
                 </thead>
                 <tbody>
+
+                    <tr class="upick-bg up-subtitle">
+                        <th scope="row">電腦零組件</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                     <tr>
-                        <th scope="row">主題機
+                        <!-- CPU -->
+                        <th scope="row">中央處理器 CPU
                         </th>
                         <td>
                             <div class="btn-group">
@@ -83,41 +85,20 @@
                                 </div>
                             </div>
                         </td>
-                        <td><i class="fas fa-plus-circle "></i></td>
-                        <td><i class="fas fa-search "></i> <u>詳細資料</u>
+                        <td><i class="fas fa-search "></i>
                         </td>
                         <td>＄0</td>
-                        <td>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
-                                    data-toggle="dropdown" data-display="static" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    數量
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                                    <button class="dropdown-item" type="button">1</button>
-                                    <button class="dropdown-item" type="button">2</button>
-                                    <button class="dropdown-item" type="button">3</button>
-                                    <button class="dropdown-item" type="button">4</button>
-                                    <button class="dropdown-item" type="button">5</button>
-                                </div>
-                            </div>
-                        </td>
+                        <td><button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
+                                data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                                數量
+                            </button></td>
+
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+                        <td><i class="fas fa-plus-circle "></i></td>
                     </tr>
-                    <tr class="upick-bg up-subtitle">
-                        <th scope="row">電腦零組件</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <!-- MB -->
                     <tr>
-                        <th scope="row">中央處理器 CPU
+                        <th scope="row">主機板 MB
                         </th>
                         <td>
                             <div class="btn-group">
@@ -154,48 +135,9 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
-                    <tr>
-                        <th scope="row">主機板 BOARD
-                        </th>
-                        <td>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
-                                    data-toggle="dropdown" data-display="static" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    請選擇商品
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                                    <button class="dropdown-item" type="button">Action</button>
-                                    <button class="dropdown-item" type="button">Another action</button>
-                                    <button class="dropdown-item" type="button">Something else here</button>
-                                </div>
-                            </div>
-                        </td>
-                        <td><i class="fas fa-plus-circle "></i></td>
-                        <td><i class="fas fa-search "></i> <u>詳細資料</u>
-                        </td>
-                        <td>＄0</td>
-                        <td>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
-                                    data-toggle="dropdown" data-display="static" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    數量
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                                    <button class="dropdown-item" type="button">1</button>
-                                    <button class="dropdown-item" type="button">2</button>
-                                    <button class="dropdown-item" type="button">3</button>
-                                    <button class="dropdown-item" type="button">4</button>
-                                    <button class="dropdown-item" type="button">5</button>
-                                </div>
-                            </div>
-                        </td>
-                        <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
-                    </tr>
+                    <!-- RAM -->
                     <tr>
                         <th scope="row">記憶體 RAM
                         </th>
@@ -234,8 +176,9 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
+                    <!-- HDD -->
                     <tr>
                         <th scope="row">傳統硬碟 HDD
                         </th>
@@ -274,8 +217,9 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
+                    <!-- SSD -->
                     <tr>
                         <th scope="row">固態硬碟 SSD
                         </th>
@@ -314,8 +258,9 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
+                    <!-- VGA -->
                     <tr>
                         <th scope="row">顯示卡 VGA
                         </th>
@@ -354,8 +299,9 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
+                    <!-- POWER -->
                     <tr>
                         <th scope="row">電源供應器 POWER
                         </th>
@@ -394,11 +340,11 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
-                    </tr>
 
+                    </tr>
+                    <!-- CASE -->
                     <tr>
-                        <th scope="row">電腦機殼 SHELL
+                        <th scope="row">電腦機殼 CASE
                         </th>
                         <td>
                             <div class="btn-group">
@@ -435,8 +381,9 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
+
                     <tr>
                         <th scope="row">鍵盤 / 滑鼠
                         </th>
@@ -475,11 +422,10 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
                     <tr class="upick-bg up-subtitle">
                         <th scope="row">散熱模組</th>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -525,7 +471,7 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
                     <tr>
                         <th scope="row">散熱膏
@@ -565,7 +511,7 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
 
 
@@ -609,11 +555,10 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
                     <tr class="upick-bg up-subtitle">
                         <th scope="row">周邊零件</th>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -659,7 +604,7 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
                     <tr>
                         <th scope="row">隨身碟 USB
@@ -699,7 +644,7 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
                     <tr>
                         <th scope="row">記憶卡
@@ -739,7 +684,7 @@
                             </div>
                         </td>
                         <td>$0</td>
-                        <td><i class="fas fa-trash "></i></td>
+
                     </tr>
                 </tbody>
             </table>

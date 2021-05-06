@@ -2,7 +2,38 @@
     color: #FD723C;
     font-weight: bold;
 }
+/* 繪圖設計 */
+.wp-design {
+    color: #FF98C9;
+}
+.wp-design-bg {
+    background-color:#FF98C9;
+}
 
+
+/* 文書處理 */
+.wp-document {
+    color: #BDAAFF;
+}
+.wp-document-bg {
+    background-color: #BDAAFF;
+}
+
+/* 影音剪輯 */
+.wp-editing {
+    color: #47D5CE;
+}
+.wp-editing-bg {
+    background-color: #47D5CE;
+}
+
+/* 電競遊戲 */
+.wp-gaming {
+    color: #43D3FD;
+}
+.wp-gaming-bg {
+    background-color: #43D3FD;
+}
 
 /* 進度條 */
 #wp-progressBar {
@@ -14,7 +45,7 @@
 .wp-progress {
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 120px;
     display: flex;
     flex: wrap;
     justify-content: space-between;
@@ -66,7 +97,7 @@
     margin: 0 0 10px 0;
 }
 
-/* 原樣式 */
+/* 對話框 原樣式 */
 .wp-point .title {
     position: absolute;
     margin-top: 16px;
@@ -88,7 +119,7 @@
     border-color: transparent transparent #fff transparent;
 }
 
-/* 對話框樣式 */
+/* 對話框 藍色樣式 */
 .wp-point .title-0 {
     position: absolute;
     margin-top: 16px;
@@ -110,7 +141,7 @@
     border-color: transparent transparent #13a3de transparent;
 }
 
-/* 灰色樣式 */
+/* 對話框 灰色樣式 */
 .wp-point .title-1 {
     position: absolute;
     margin-top: 16px;
@@ -169,10 +200,8 @@
     background-color: #fafafa;
     /* justify-self: start; */
 }
-
-
-
-.wp-row p,
+.wp-row 
+p,
 h5 {
     line-height: 20px;
     padding: 0px 0;
@@ -215,7 +244,12 @@ h5 {
 }
 
 .wp-btn-product-hover {
-    background-color: #13a3de;
+    width: 80px;
+    border-radius: 16px;
+    justify-content: center;
+    text-align: center;
+    transition: .5s;
+    background-color: #384449;
     color: #Fff;
 }
 
