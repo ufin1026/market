@@ -14,12 +14,74 @@
     <!-- up style -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="up-color.css">
-    <link rel="stylesheet" href="upick-web.css">
-    <link rel="stylesheet" href="upick-phone.css" type="text/css"
-        media="only screen and (min-width: 0px) and (max-width: 767px)" />
     <!-- style -->
     <style>
+        body {
+            background-color: #383E44
+        }
 
+        .up-container {
+            margin-top: 120px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        th {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        td {
+            text-align: center;
+            padding: 8px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:hover {
+            background-color: #f5f6f8;
+        }
+
+        .up-table-frame {
+            height: 500px;
+            overflow: scroll;
+            border-radius: 4px;
+        }
+
+        /* .up-table-title-fixed {
+            position: fixed;
+            width: 100%;
+        } */
+
+        .up-table-title {
+            background-color: #9AA3AC;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+
+        .up-table-subtitle {
+            background-color: #E4E8EE;
+            color: #4AC8C2;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .up-table {
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        .up-card {
+            border-radius: 4px;
+            padding: 16px;
+            background-color: #E4E8EE;
+        }
     </style>
 </head>
 
@@ -33,22 +95,22 @@
                 <table class="up-table">
                     <thead class="up-table-title-fixed">
                         <tr class="up-table-title">
-                            <th scope=col class="item">品項</th>
-                            <td scope="col" class="brand">品牌</td>
-                            <td scope="col" class="item">商品名稱</td>
-                            <td scope="col" class="itemprice">單價</td>
-                            <td scope="col" class="amount">數量</td>
-                            <td scope="col" class="sub">小計</td>
+                            <th scope=>品項</th>
+                            <td scope="col">品牌</td>
+                            <td scope="col">商品名稱</td>
+                            <td scope="col">單價</td>
+                            <td scope="col">數量</td>
+                            <td scope="col">小計</td>
                             <td scope="col"></td>
                         </tr>
                     </thead>
                     <!-- 主題機 -->
                     <tbody>
                         <tr>
-                            <th scope="row" class="item">主題機
+                            <th scope="row">主題機
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -63,7 +125,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -78,9 +140,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -88,30 +150,30 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
                         </tr>
                     </tbody>
                     <!-- 電腦零組件 -->
                     <thead>
                         <tr class="up-table-subtitle">
-                            <th scope="row" class="product">電腦零組件</th>
-                            <td class="brand"></td>
-                            <td class="item"></td>
-                            <td class="itemprice"></td>
-                            <td class="amount"></td>
-                            <td class="sub"></td>
-                            <td class="add"></td>
+                            <th scope="row">電腦零組件</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- CPU -->
                         <tr>
-                            <th scope="row" class="product">中央處理器 CPU
+                            <th scope="row">中央處理器 CPU
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -126,7 +188,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -141,9 +203,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -151,16 +213,16 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
                         </tr>
                         <!-- MB -->
                         <tr>
-                            <th scope="row" class="product">主機板 MB
+                            <th scope="row">主機板 MB
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -175,7 +237,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -190,9 +252,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -200,17 +262,17 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                         <!-- RAM -->
                         <tr>
-                            <th scope="row" class="product">記憶體 RAM
+                            <th scope="row">記憶體 RAM
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -225,7 +287,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -240,9 +302,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -250,17 +312,17 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                         <!-- SSD -->
                         <tr>
-                            <th scope="row" class="product">固態硬碟 SSD
+                            <th scope="row">固態硬碟 SSD
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -275,7 +337,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -290,9 +352,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -300,17 +362,17 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                         <!-- VGA -->
                         <tr>
-                            <th scope="row" class="product">顯示卡 VGA
+                            <th scope="row">顯示卡 VGA
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -325,7 +387,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -340,9 +402,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -350,17 +412,17 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                         <!-- POWER -->
                         <tr>
-                            <th scope="row" class="product">電源供應器 POWER
+                            <th scope="row">電源供應器 POWER
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -375,7 +437,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -390,9 +452,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -400,17 +462,17 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                         <!-- CASE -->
                         <tr>
-                            <th scope="row" class="product">電腦機殼 CASE
+                            <th scope="row">電腦機殼 CASE
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -425,7 +487,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -440,9 +502,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -450,16 +512,16 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                         <tr>
-                            <th scope="row" class="product">鍵盤 / 滑鼠
+                            <th scope="row">鍵盤 / 滑鼠
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -474,7 +536,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -489,9 +551,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -499,31 +561,31 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                     </tbody>
                     <!-- 散熱模組 -->
                     <thead>
                         <tr class="up-table-subtitle">
-                            <th scope="row" class="product">散熱模組</th>
-                            <td class="brand"></td>
-                            <td class="item"></td>
-                            <td class="itemprice"></td>
-                            <td class="amount"></td>
-                            <td class="sub"></td>
-                            <td class="add"></td>
+                            <th scope="row">散熱模組</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- 散熱器 -->
                         <tr>
-                            <th scope="row" class="product">散熱器
+                            <th scope="row">散熱器
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -538,7 +600,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -553,9 +615,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -563,17 +625,17 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                         <!-- 散熱膏 -->
                         <tr>
-                            <th scope="row" class="product">散熱膏
+                            <th scope="row">散熱膏
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -588,7 +650,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -603,9 +665,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -613,17 +675,17 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                         <!-- 水冷 -->
                         <tr>
-                            <th scope="row" class="product">水冷
+                            <th scope="row">水冷
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -638,7 +700,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -653,9 +715,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -663,31 +725,31 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                     </tbody>
                     <!-- 周邊零件 -->
                     <thead>
                         <tr class="up-table-subtitle">
-                            <th scope="row" class="product">周邊零件</th>
-                            <td class="brand"></td>
-                            <td class="item"></td>
-                            <td class="itemprice"></td>
-                            <td class="amount"></td>
-                            <td class="sub"></td>
-                            <td class="add"></td>
+                            <th scope="row">周邊零件</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- 外接硬碟 -->
                         <tr>
-                            <th scope="row" class="product">外接硬碟
+                            <th scope="row">外接硬碟
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -702,7 +764,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -717,9 +779,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -727,17 +789,17 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                         <!-- 隨身硬碟 -->
                         <tr>
-                            <th scope="row" class="product">隨身碟 USB
+                            <th scope="row">隨身碟 USB
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -752,7 +814,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -767,9 +829,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -777,17 +839,17 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
 
                         </tr>
                         <!-- 記憶卡 -->
                         <tr>
-                            <th scope="row" class="product">記憶卡
+                            <th scope="row">記憶卡
                             </th>
                             <!-- 選擇品牌下拉 -->
-                            <td class="brand">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -802,7 +864,7 @@
                                 </div>
                             </td>
                             <!-- 選擇商品下拉 -->
-                            <td class="item">
+                            <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm "
                                         data-toggle="dropdown" data-display="static" aria-haspopup="true"
@@ -817,9 +879,9 @@
                                 </div>
                             </td>
                             <!-- 商品單價 -->
-                            <td class="itemprice">＄0</td>
+                            <td>＄0</td>
                             <!-- 選擇商品數量 -->
-                            <td class="amount">
+                            <td>
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm"
                                     data-toggle="dropdown" data-display="static" aria-haspopup="true"
                                     aria-expanded="false">
@@ -827,9 +889,10 @@
                                 </button>
                             </td>
                             <!-- 小計 -->
-                            <td class="sub price">$0</td>
+                            <td class="price">$0</td>
                             <!-- 新增 -->
-                            <td class="add"><i class="fas fa-plus-circle "></i></td>
+                            <td><i class="fas fa-plus-circle "></i></td>
+
                         </tr>
                     </tbody>
                 </table>
@@ -882,11 +945,6 @@
         crossorigin="anonymous"></script>
 
     <script>
-        $(document).on('click', '.add', function () {
-            console.log('hi')
-            $("#menu").append('<li class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></li >');
-        })
-
 
     </script>
 </body>
