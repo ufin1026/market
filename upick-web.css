@@ -31,7 +31,7 @@ tbody tr:hover {
 
 .up-table-frame {
     height: 520px;
-    overflow: scroll;
+    overflow-y: scroll;
     border-radius: 4px;
 }
 
@@ -93,5 +93,5 @@ tbody tr:hover {
 
 .list-group{
     height: 300px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
