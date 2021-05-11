@@ -30,7 +30,7 @@ tbody tr:hover {
 }
 
 .up-table-frame {
-    height: 500px;
+    height: 520px;
     overflow: scroll;
     border-radius: 4px;
 }
@@ -64,4 +64,34 @@ tbody tr:hover {
     border-radius: 4px;
     padding: 16px;
     background-color: #E4E8EE;
+}
+
+.wp-button {
+    width: 100px;
+    border-radius: 80px;
+    padding: 8px;
+    margin: 4px;
+    border: none;
+    transition: .3s;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+
+.wp-button:hover {
+    color: #E4E8EE;
+}
+.wp-card {
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.totalPrice{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.list-group{
+    height: 300px;
+    overflow: scroll;
 }
