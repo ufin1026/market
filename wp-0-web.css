@@ -25,6 +25,7 @@
 
 .wp-0-container {
     display: flex;
+    margin-top: 120px;
 }
 
 
@@ -37,6 +38,7 @@
     border-radius: 150px;
     width: 40px;
     height: 600px;
+    transition: .5s;
 }
 
 .wp-design-hover:hover {
@@ -44,7 +46,7 @@
     border-radius: 150px;
     width: 40px;
     height: 600px;
-    transition: .8s;
+    transition: .5s;
 }
 
 .wp-document-hover:hover {
