@@ -35,17 +35,11 @@ tbody tr:hover {
     border-radius: 4px;
 }
 
-/* .up-table-title-fixed {
-    position: fixed;
-    width: 100%;
-} */
-
 .up-table-title {
     background-color: #9AA3AC;
     color: #fff;
     font-size: 14px;
     font-weight: bold;
-
 }
 
 .up-table-subtitle {

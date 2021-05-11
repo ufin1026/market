@@ -140,32 +140,33 @@
             <div class="col-lg-8 d-flex flex-nowrap overflow-hidden">
                 <!-- CPU -->
                 <div class="col-lg-12 wp-slide ">
-                    <div class="wp-row col-4 "> <input type="radio" id="radio1" name="radio" checked="checked" />
+                    <div class="wp-row col-4 ">
                         <img src="./images/AMD01.jpg" alt="">
                         <h5>AMD Athlon™ 3000G</h5>
                         <p>
                             11111111111
                         </p>
                         <h5 class="price">$1000</h5>
-                        <button input type="checkbox" class="btn  wp-btn-product ">選擇</button>
+                        <button class="btn wp-btn-product"><input type="radio" id="radio1" name="radio"
+                                checked="checked" />選擇</button>
                     </div>
-                    <div class="col-4 wp-row"><input type="radio" id="radio2" name="radio" />
+                    <div class="col-4 wp-row">
                         <img src="./images/AMD01.jpg" alt="">
                         <h5>AMD Athlon™ 3000G</h5>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
                         </p>
                         <h5 class="price">$1000</h5>
-                        <button class="btn wp-btn-product">選擇</button>
+                        <button class="btn wp-btn-product"><input type="radio" id="radio2" name="radio" />選擇</button>
                     </div>
-                    <div class="wp-row col-4"><input type="radio" id="radio3" name="radio" />
+                    <div class="wp-row col-4">
                         <img src="./images/AMD01.jpg" alt="">
                         <h5>AMD Athlon™ 3000G</h5>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
                         </p>
                         <h5 class="price">$1000</h5>
-                        <button class="btn wp-btn-product">選擇</button>
+                        <button class="btn wp-btn-product"><input type="radio" id="radio3" name="radio" />選擇</button>
                     </div>
                 </div>
                 <!-- MB -->
@@ -490,7 +491,7 @@
     <script>
         let nowItem = 0;
         // 下一步
-        $('.btn-next').click(function () {
+        $(document).on('click', '.btn-next', function () {
             if (nowItem < 9) {
                 console.log(nowItem);
                 nowItem = nowItem + 1;
@@ -510,7 +511,7 @@
             } else false;
         })
         // 上一步
-        $('.btn-last').on('click', function () {
+        $(document).on('click', '.btn-last', function () {
             if (nowItem > 0) {
                 console.log(nowItem);
                 nowItem = nowItem - 1;
@@ -536,7 +537,7 @@
         });
 
         // 選擇後新增li
-        $('.wp-btn-product').on('click', function () {
+        $(document).on('click', '.wp-btn-product', function () {
             console.log('hi')
             $("#menu").append('<li class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></li >');
         })
