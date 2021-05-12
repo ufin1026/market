@@ -65,14 +65,14 @@
         /*BUTTON-web版-WEPICK*/
         /*btnShare是BUTTON-web版共用設定*/
         .btnShare {
-            height: 60px;
-            width: 400px;
+            height: 50px;
+            width: 300px;
             border-radius: calc(40px * 0.5);
-            border-radius: 30px;
+            border-radius: 25px;
             text-align: center;
             line-height: 40px;
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 22px;
+            font-weight: lighter;
         }
 
         .wBtnNormalDark {
@@ -84,7 +84,7 @@
         }
 
         .wBtnNormalDark:hover {
-            background-color: #383E44;
+            background-color: #9AA3AC;
         }
 
         .wBtnNormalWhite {
@@ -96,13 +96,14 @@
         }
 
         .wBtnNormalWhite:hover {
-            background-color: #E4E8EE;
+            background-color: #383E44;
+            color: #ffffff;
         }
 
         .wBtnLock {
             background-color: #E4E8EE;
-            color: #9a9fa5;
-            border: 1px solid #E4E8EE;
+            color: #9AA3AC;
+            border: 1px solid #9AA3AC;
             outline: none;
         }
 
@@ -115,7 +116,7 @@
         }
 
         .wBtnAddCar:hover {
-            background-color: #383E44;
+            background-color: #9AA3AC;
         }
 
         .wBtnAddTrace {
@@ -180,7 +181,7 @@
         }
 
         .wBtnNPk:hover {
-            background-color: #CB1162;
+            background-color: #FD6A6A;
         }
 
         .wBtnNPkAdCar {
@@ -192,7 +193,7 @@
         }
 
         .wBtnNPkAdCar:hover {
-            background-color: #CB1162;
+            background-color: #FD6A6A;
         }
 
         /*BUTTON-mobile版-WEPICK*/

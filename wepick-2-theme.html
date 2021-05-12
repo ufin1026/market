@@ -77,7 +77,7 @@
                             11111111111
                         </p>
                         <h5 class="price">$1000</h5>
-                        <button class="btn wp-btn-product"><input type="radio" id="radio1" name="radio"
+                        <button class="btn wp-btn-product wBtnNormalDark"><input type="radio" id="radio1" name="radio"
                                 checked="checked" />選擇</button>
                     </div>
                     <div class="col-4 wp-row">
@@ -87,7 +87,8 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
                         </p>
                         <h5 class="price">$1000</h5>
-                        <button class="btn wp-btn-product"><input type="radio" id="radio2" name="radio" />選擇</button>
+                        <button class="btn wp-btn-product wBtnNormalDark"><input type="radio" id="radio2"
+                                name="radio" />選擇</button>
                     </div>
                     <div class="wp-row col-4">
                         <img src="./images/AMD01.jpg" alt="">
@@ -96,7 +97,8 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
                         </p>
                         <h5 class="price">$1000</h5>
-                        <button class="btn wp-btn-product"><input type="radio" id="radio3" name="radio" />選擇</button>
+                        <button class="btn wp-btn-product wBtnNormalDark"><input type="radio" id="radio3"
+                                name="radio" />選擇</button>
                     </div>
                 </div>
             </div>
@@ -195,11 +197,11 @@
         })
         // 商品選單
         $('.wp-row').hover(function () {
-            $('.wp-btn-product').toggleClass('wp-btn-product-hover')
+            $('.wp-btn-product wBtnNormalDark').toggleClass('wp-btn-product wBtnNormalDark-hover')
         });
 
         // 選擇後新增li
-        $(document).on('click', '.wp-btn-product', function () {
+        $(document).on('click', '.wp-btn-product wBtnNormalDark', function () {
             console.log('hi')
             $("#menu").append('<li class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></li >');
         })
