@@ -43,6 +43,9 @@
    align-items: center;
    /* justify-content: space-around; */
 }
+.wp-originStyle>h2{
+padding-left: 30px;
+}
 
 .wp-design-hover {
     background-color: #ff98c930;
@@ -56,7 +59,6 @@
     background-color: #47D5CE30;
    
 }
-
 
 .wp-gaming-hover {
     background-color: #43D3FD30;
