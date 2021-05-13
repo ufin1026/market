@@ -3,7 +3,7 @@
 }
 
 .up-table-frame {
-    height: 700px;
+    height: 600px;
     overflow-y: scroll;
     border-radius: 4px;
     width: 100%;
@@ -172,7 +172,7 @@
 }
 
 .up-list-group {
-    height: 520px;
+    height: 420px;
     overflow-y: scroll;
 }
 
