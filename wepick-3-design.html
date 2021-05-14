@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wepick design</title>
+    <title>wepickCPU</title>
     <!-- boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -31,12 +31,12 @@
         <div id="wp-progressBar" class="wp-progress">
             <div class="wp-point">
                 <!-- 對話小尖尖 -->
-                <div class="title-delta title-delta-1">
+                <div class="title-delta title-delta-0">
                 </div>
-                <div class="title title-1">
-                    <span>theme</span>
+                <div class="title title-0">
+                    <span>CPU</span>
                     <br>
-                    <span>繪圖主題機</span>
+                    <span>中央處理器</span>
                 </div>
             </div>
             <div class="wp-point">
@@ -59,7 +59,7 @@
             <!-- 商品選項 -->
             <div class="col-lg-8 d-flex flex-nowrap overflow-hidden">
                 <!-- 主題機 -->
-                <div class="col-lg-12 wp-slide theme">
+                <div class="col-lg-12 wp-slide cpu">
                     <div class="wp-row col-4 ">
                         <img src="./images/AMD01.jpg" alt="">
                         <h5>AMD Athlon™ 3000G</h5>
@@ -88,13 +88,52 @@
 
                     </div>
                 </div>
+                <!-- chart -->
+                <div class="col-lg-12 wp-slide chart">
+                    <div class="wp-row col-4 ">
+                        <img src="./images/AMD01.jpg" alt="">
+                        <h5>AMD Athlon™ 3000G</h5>
+                        <p>
+                            000000
+                        </p>
+                        <h5 class="price">$1000</h5>
+
+                    </div>
+                    <div class="col-4 wp-row">
+                        <img src="./images/AMD01.jpg" alt="">
+                        <h5>AMD Athlon™ 3000G</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                        </p>
+                        <h5 class="price">$1000</h5>
+
+                    </div>
+                    <div class="wp-row col-4">
+                        <img src="./images/AMD01.jpg" alt="">
+                        <h5>AMD Athlon™ 3000G</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                        </p>
+                        <h5 class="price">$1000</h5>
+
+                    </div>
+                </div>
             </div>
             <!-- 表單 -->
-            <div class="col-lg-4 wp-card">
+            <div class="col-lg-4 wp-card ">
                 <div class="wp-card-contain">
                     <h5>商品清單</h5>
                     <ul id="wpList" class="list-group ">
+                        <!-- <li class="list-group-item d-flex">
+                            <p class="col-9 my-auto">AMD Athlon™ 3000G</p>
 
+                            <h5 class="price col-3 my-auto">$1000</h5>
+                        </li>
+                        <li class="list-group-item d-flex">
+                            <p class="col-9 my-auto">
+                                HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2/16</p>
+                            <h5 class="price col-3 my-auto">$1000</h5>
+                        </li> -->
                     </ul>
                     <div class="totalPrice card-body ">
                         <h5>
@@ -106,10 +145,10 @@
                     </div>
                 </div>
                 <!-- 按鍵 -->
-                <div class="d-flex justify-content-center">
-                    <button class="btn wp-button btn-last wp-design-bg">上一步</button>
+                <div class="d-flex justify-content-around ">
+                    <button class="btn wp-button wBtnNGr btn-last">上一步</button>
 
-                    <button class="btn wp-button btn-next wp-design-bg">結帳</button>
+                    <button class="btn wp-button wBtnNPk btn-next">下一步</button>
                 </div>
             </div>
         </div>
@@ -131,12 +170,13 @@
     <script>
         let nowItem = 0;
         // 下一步
-        let lineWidth = nowItem * 100 + '%';
-        console.log(lineWidth);
         $(document).on('click', '.btn-next', function () {
-            if (nowItem < 2) {
-                console.log(nowItem);
+            if (nowItem < 1) {
                 nowItem = nowItem + 1;
+                console.log(nowItem);
+                if (nowItem === 1) {
+                    $('.btn-next').text('結帳')
+                }
                 // 進度條長度
                 let lineWidth = nowItem * 100 + '%';
                 console.log(lineWidth);
@@ -155,8 +195,12 @@
         // 上一步
         $(document).on('click', '.btn-last', function () {
             if (nowItem > 0) {
-                console.log(nowItem);
                 nowItem = nowItem - 1;
+                console.log(nowItem);
+                if (nowItem < 1) {
+                    $('.btn-next').text('下一步')
+                }
+
                 // 進度條長度
                 let lineWidth = nowItem * 100 + '%';
                 console.log(lineWidth);
@@ -174,22 +218,27 @@
             else false;
         })
         // 商品選單
-        $('.wp-row').hover(function () {
-            $('.wp-btn-product wBtnNormalDark').toggleClass('wp-btn-product wBtnNormalDark-hover')
-        });
+        // $('.wp-row').hover(function () {
+        //     $('.wp-btn-product wBtnNormalDark').toggleClass('wp-btn-product wBtnNormalDark-hover')
+        // });
+
+        let index = 1;
 
         // 選擇後新增li
         $(document).on('click', '.wp-row', function () {
 
             console.log('hi')
             index++;
-            if ($("#wpList").find('#wpListTheme').length) {
-                $("#wpListTheme").html('<p class= "col-9 my-auto" > ' + index + 'GGGG FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5>');
+            if ($("#wpList").find('#wpListCpu').length) {
+                $("#wpListCpu").html('<p class= "col-9 my-auto" > ' + index + 'GGGG FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5>');
             }
             else {
-                $("#wpList").append('<li id="wpListTheme" class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></li >');
+                $("#wpList").append('<li id="wpListCpu" class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></li >');
             }
+
+
         })
+
     </script>
 </body>
 
