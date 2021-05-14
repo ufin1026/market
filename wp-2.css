@@ -46,7 +46,7 @@
     /* 區塊大小 */
     height: 16px;
     /* 區塊大小 */
-    background-color: #FDBD3F;
+    background-color: #FF8888;;
     /* 區塊顏色 */
     border-radius: 50%;
     /* 區塊圓角 */
@@ -69,7 +69,7 @@
     width: 80px;
     height: 45px;
     background: #fff;
-    color: #13a3de;
+    color: #4AC8C2;
     border-radius: 15px;
 }
 
@@ -90,7 +90,7 @@
     transform: translateX(-40%);
     width: 80px;
     height: 45px;
-    background: #13a3de;
+    background: #4AC8C2;
     color: #fff;
     border-radius: 15px;
 }
@@ -101,7 +101,7 @@
     width: 0;
     height: 0;
     border: 8px solid;
-    border-color: transparent transparent #13a3de transparent;
+    border-color: transparent transparent #4AC8C2 transparent;
 }
 
 /* 對話框 灰色樣式 */
@@ -160,7 +160,7 @@
     /* height: 400px; */
     padding: 10px;
     border-radius: 4px;
-    background-color: #fafafa;
+    background-color: #f5f6f8;
     /* justify-self: start; */
 }
 .wp-row 

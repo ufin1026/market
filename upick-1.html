@@ -19,13 +19,7 @@
     <link rel="stylesheet" href="upick-phone.css" type="text/css"
         media="only screen and (min-width: 0px) and (max-width: 767px)" />
     <style>
-        .up-footer {
-            padding: 10px;
-            width: 100%;
-            background-color: #9AA3AC;
-            position: fixed;
-            bottom: 0;
-        }
+
     </style>
 </head>
 
@@ -193,7 +187,7 @@
                     </form>
                 </div>
                 <div class="col sub price">$0</div>
-                <div class="col add">
+                <div class="col add" id="add">
                     <span>
                         <i class="fas fa-plus-circle "></i>
                     </span>
@@ -1202,7 +1196,7 @@
         <!-- 商品清單 -->
         <div class="col-lg-4 col-sm-12 up-card">
             <h5>商品清單</h5>
-            <div id="menu" class="up-list-group">
+            <div id="upList" class="up-list-group">
                 <div class=" list-group-item d-flex">
                     <div class="col-11">
                         <p class="my-auto "> HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2/16</p>
@@ -1237,7 +1231,7 @@
 
             </div>
 
-            <div class="totalPrice d-flex justify-content-end">
+            <div class="totalPrice d-flex justify-content-center">
                 <h5>
                     總價
                     <span class="price">
@@ -1247,21 +1241,13 @@
             </div>
             <!-- 按鍵 -->
             <div class="d-flex justify-content-around">
-                <button class="btn wp-button wBtnNGr">匯出清單</button>
+                <a href="./upick-2-productlist.html"><button class="btn wp-button wBtnNGr">匯出清單</button>
+                </a>
                 <button class="btn wp-button wBtnNPk">結帳</button>
             </div>
         </div>
     </div>
-    <div class="up-footer">
-        <div class="container">
-            <div class="d-flex justify-content-end">
-                <button class="btn wp-button wBtnNGr">匯出清單</button>
-                <button class="btn wp-button wBtnNPk">結帳</button>
-            </div>
-        </div>
-        <!-- 按鍵 -->
 
-    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
@@ -1387,13 +1373,17 @@
 
         $(document).on('click', '.add', function () {
             console.log('hi')
-            $("#menu").append('<div class=" list-group-item"><p class="my-auto"> HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2/16</p><ul><li class=" d-flex justify-content-between"><div class="d-flex"><form class="widget amount w-100"><span class="price col-6 my-auto">$1000</span></div><div class="my-auto"><i class=" fas fa-trash trashcan"></i></div></li></ul></div>');
+            $("#upList").append('<div class=" list-group-item d-flex"><div class="col-11"><p class="my-auto "> HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2/16</p><div class="d-flex justify-content-between"><form class="widget amount"><select name="amount"><option>數量</option><option>pro2</option><option>pro3</option><option>pro4</option><option>pro5</option></select><div class="select"><span class="value"></span><ul class="optList hidden"><li class="option">0</li><li class="option">1</li><li class="option">2</li><li class="option">3</li><li class="option">4</li><li class="option">5</li></ul></div></form><span class="price my-auto">$1000</span></div></div><div class="col-1 my-auto trashcan"><i class=" fas fa-trash "></i></div></div></div>');
         })
-
+        // var upList = document.getElementById('upList');
+        // var newList = document.createElement('div');
+        // var textNode = document.createTextNode("Hello");
+        // newList.appendChild(textNode);
+        // upList.appendChild(newList);
 
         $(document).on('click', '.trashcan', function () {
             console.log('remove')
-            $('.trashcan').parent(getSelection.parent).remove()
+            $(this).parent().remove()
         })
 
     </script>

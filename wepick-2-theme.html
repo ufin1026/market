@@ -36,16 +36,6 @@
                 <div class="title title-1">
                     <span>theme</span>
                     <br>
-                    <span>選擇主題</span>
-                </div>
-            </div>
-            <div class="wp-point">
-                <!-- 對話小尖尖 -->
-                <div class="title-delta title-delta-0">
-                </div>
-                <div class="title title-0">
-                    <span>design</span>
-                    <br>
                     <span>繪圖主題機</span>
                 </div>
             </div>
@@ -68,8 +58,8 @@
         <div class="row wp-container d-flex">
             <!-- 商品選項 -->
             <div class="col-lg-8 d-flex flex-nowrap overflow-hidden">
-                <!-- CPU -->
-                <div class="col-lg-12 wp-slide ">
+                <!-- 主題機 -->
+                <div class="col-lg-12 wp-slide theme">
                     <div class="wp-row col-4 ">
                         <img src="./images/AMD01.jpg" alt="">
                         <h5>AMD Athlon™ 3000G</h5>
@@ -77,8 +67,7 @@
                             11111111111
                         </p>
                         <h5 class="price">$1000</h5>
-                        <button class="btn wp-btn-product wBtnNormalDark"><input type="radio" id="radio1" name="radio"
-                                checked="checked" />選擇</button>
+
                     </div>
                     <div class="col-4 wp-row">
                         <img src="./images/AMD01.jpg" alt="">
@@ -87,8 +76,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
                         </p>
                         <h5 class="price">$1000</h5>
-                        <button class="btn wp-btn-product wBtnNormalDark"><input type="radio" id="radio2"
-                                name="radio" />選擇</button>
+
                     </div>
                     <div class="wp-row col-4">
                         <img src="./images/AMD01.jpg" alt="">
@@ -97,8 +85,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
                         </p>
                         <h5 class="price">$1000</h5>
-                        <button class="btn wp-btn-product wBtnNormalDark"><input type="radio" id="radio3"
-                                name="radio" />選擇</button>
+
                     </div>
                 </div>
             </div>
@@ -106,17 +93,8 @@
             <div class="col-lg-4 wp-card">
                 <div class="wp-card-contain">
                     <h5>商品清單</h5>
-                    <ul id="menu" class="list-group ">
-                        <li class="list-group-item d-flex">
-                            <p class="col-9 my-auto">AMD Athlon™ 3000G</p>
+                    <ul id="wpList" class="list-group ">
 
-                            <h5 class="price col-3 my-auto">$1000</h5>
-                        </li>
-                        <li class="list-group-item d-flex">
-                            <p class="col-9 my-auto">
-                                HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2/16</p>
-                            <h5 class="price col-3 my-auto">$1000</h5>
-                        </li>
                     </ul>
                     <div class="totalPrice card-body ">
                         <h5>
@@ -153,14 +131,14 @@
     <script>
         let nowItem = 0;
         // 下一步
-        let lineWidth = nowItem * 50 + '%';
+        let lineWidth = nowItem * 100 + '%';
         console.log(lineWidth);
         $(document).on('click', '.btn-next', function () {
             if (nowItem < 2) {
                 console.log(nowItem);
                 nowItem = nowItem + 1;
                 // 進度條長度
-                let lineWidth = nowItem * 50 + '%';
+                let lineWidth = nowItem * 100 + '%';
                 console.log(lineWidth);
                 $('.line').css('width', lineWidth);
                 // 進度條對話框
@@ -180,7 +158,7 @@
                 console.log(nowItem);
                 nowItem = nowItem - 1;
                 // 進度條長度
-                let lineWidth = nowItem * 11.1 + '%';
+                let lineWidth = nowItem * 100 + '%';
                 console.log(lineWidth);
                 $('.line').css('width', lineWidth);
                 // 進度條對話框
@@ -201,11 +179,17 @@
         });
 
         // 選擇後新增li
-        $(document).on('click', '.wp-btn-product wBtnNormalDark', function () {
-            console.log('hi')
-            $("#menu").append('<li class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></li >');
-        })
+        $(document).on('click', '.wp-row', function () {
 
+            console.log('hi')
+            index++;
+            if ($("#wpList").find('#wpListTheme').length) {
+                $("#wpListTheme").html('<p class= "col-9 my-auto" > ' + index + 'GGGG FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5>');
+            }
+            else {
+                $("#wpList").append('<li id="wpListTheme" class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></li >');
+            }
+        })
     </script>
 </body>
 
