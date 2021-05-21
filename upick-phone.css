@@ -4,7 +4,7 @@
 }
 
 .up-table-frame {
-    height: 520px;
+    height: 600px;
     /* overflow-y: scroll; */
     border-radius: 4px;
     width: 100%;
@@ -47,29 +47,37 @@
 }
 
 .item {
-    /* width: 100px; */
+    width: 40px;
+    margin: auto;
 }
 
 .brand {
-    /* width: 100px; */
+    width: 60px;
+    margin: auto;
 }
 
 .productname {
-    /* width: 150px; */
+    width: 60px;
+    margin: auto;
 }
 
 .itemprice {
-    display: none;
+   display: none;
 }
 
-.amount{
-    /* width: 100px; */
+.amount {
+    width: 40px;
+    margin: auto;
 }
-.sub{
-    display: none;
+
+.sub {
+    width: 40px;
+    margin: auto;
 }
-.add{
-    /* width: 100px; */
+
+.add {
+    width: 10px;
+    margin: auto;
 }
 
 /* 下拉式選單 */
