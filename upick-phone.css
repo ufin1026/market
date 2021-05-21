@@ -195,15 +195,13 @@
 
 .wWhitePgAreaHTML9 {
     z-index: 10;
-    position: absolute;
     top: 30%;
-    left: 12%;
-    /* display: none; */
-    width: 60%;
+    left: 10%;
 }
 
 .windowShare{
     width: 300px;
+   
 }
 
 .up-productlist {

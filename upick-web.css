@@ -172,6 +172,9 @@
     color: #FFFFFF;
 }
 
+
+/* upick-2 */
+
 /* 商品清單 */
 .up-card {
     border-radius: 4px;
@@ -195,4 +198,59 @@
     font-weight: bold;
     font-size: 14px;
     margin: 0 10px;
+}
+
+.up-productlist {
+    border: 1px solid #E4E8EE;
+    border-radius: 4px;
+    padding: 16px;
+    /* background-color: #E4E8EE; */
+    margin-left: 10px;
+}
+
+.up-productlist-title {
+    color: #E4E8EE;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.up-productlist-product {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 20px;
+}
+
+.up-productlist-product p {
+    color: #E4E8EE;
+}
+
+.up-productlist-totleprice {
+    color: #E4E8EE;
+}
+
+.wWhitePgAreaHTML9 {
+    z-index: 10;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    /* display: none; */
+    width: 300px;
+}
+
+.cover {
+    background: #000;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    opacity: 0.5;
+    /* display: none; */
+    z-index: 2
+}
+
+.fa-copy {
+    color: #383E44;
 }
