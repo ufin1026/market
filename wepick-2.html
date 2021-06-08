@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
+    <!-- up style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- wp-2.css -->
+    <link rel="stylesheet" href="./up-color.css">
+
+    <style>
+        .wp {
+            width: 1000px;
+            margin: auto;
+            padding-top: 200px;
+        }
+
+        .arrow {
+            font-size: 28px;
+            position: absolute;
+            transition: .3s;
+            z-index: 10;
+            color: #383E44;
+        }
+
+        .left-arrow {
+            top: 50%;
+            left: 0%;
+        }
+
+        .right-arrow {
+
+            top: 50%;
+            right: 0%;
+        }
+
+        .wp-button {
+            width: 200px;
+            border-radius: 80px;
+            padding: 8px;
+            margin: 4px;
+            border: none;
+            transition: .3s;
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .wp-button:hover {
+            color: #E4E8EE;
+        }
+
+        .wp-btn-product {
+            border-radius: 80px;
+            padding: 8px;
+            margin: 4px;
+            border: none;
+            transition: .3s;
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+            transition: .5s;
+            align-items: end;
+        }
+
+        .wp-btn-product:hover {
+            color: #fff;
+            transition: .5s;
+        }
+
+
+
+        .wp-card {
+            height: 500px;
+            background-color: #FF888830;
+            border-radius: 4px;
+            padding: 16px;
+            margin-top: 20px;
+            /* justify-content: center;
+            align-self: center; */
+        }
+
+        .totalPrice {
+            text-align: center;
+        }
+
+        .list-group {
+            height: 330px;
+            overflow-y: scroll;
+        }
+
+        .wp-product-index {
+            justify-content: center;
+            align-self: center;
+        }
+
+
+        .wp-info {
+            justify-content: center;
+            align-self: center;
+        }
+
+        .wp-slide {
+            max-width: 660px;
+            height: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .wp-wrap {
+            width: 660px;
+            position: absolute;
+        }
+
+        .wp-row {
+            width: 200px;
+            height: 500px;
+            border-radius: 4px;
+            padding: 10px;
+            background-color: #f5f6f8;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+        .wp-row img {
+            width: 100%;
+        }
+
+        .wp-row-p {
+            background-color: #FF888860;
+            color: #fafafa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wp d-flex flex-wrap ">
+            <!-- 小卡片 -->
+            <div class="col-lg-8 col-sm-4 wp-product-index">
+                <div class="wp-arrow ">
+                    <div class="arrow left-arrow">
+                        <i class="fas fa-angle-left"></i>
+                    </div>
+                    <div class="arrow right-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+                <div class="wp-slide">
+                    <div class="list-unstyled d-flex wp-wrap ">
+                        <!-- A -->
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="wp-row">
+                                <img src="./images/AMD01.jpg" alt="">
+                                <h5>A</h5>
+                                <div class="product-info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                                    </p>
+                                </div>
+
+                                <h5 class="price">$1000</h5>
+                                <button id="wp-btn-product" class="btn wp-btn-product wBtnNormalDark">選擇</button>
+                            </div>
+                        </div>
+                        </li>
+                        <!-- B -->
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="wp-row ">
+                                <img src="./images/AMD01.jpg" alt="">
+                                <h5>B</h5>
+                                <div class="product-info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                                    </p>
+                                </div>
+
+                                <h5 class="price">$1000</h5>
+                                <button id="wp-btn-product" class="btn wp-btn-product wBtnNormalDark">選擇</button>
+                            </div>
+                        </div>
+                        <!-- C -->
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="wp-row">
+                                <img src="./images/AMD01.jpg" alt="">
+                                <h5>C</h5>
+                                <div class="product-info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                                    </p>
+                                </div>
+
+                                <h5 class="price">$1000</h5>
+                                <button id="wp-btn-product" class="btn wp-btn-product wBtnNormalDark">選擇</button>
+                            </div>
+                        </div>
+                        <!-- D -->
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="wp-row">
+                                <img src="./images/AMD01.jpg" alt="">
+                                <h5>D</h5>
+                                <div class="product-info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                                    </p>
+                                </div>
+
+                                <h5 class="price">$1000</h5>
+                                <button id="wp-btn-product" class="btn wp-btn-product wBtnNormalDark">選擇</button>
+                            </div>
+                        </div>
+                        <!-- E -->
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="wp-row">
+                                <img src="./images/AMD01.jpg" alt="">
+                                <h5>E</h5>
+                                <div class="product-info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                                    </p>
+                                </div>
+
+                                <h5 class="price">$1000</h5>
+                                <button id="wp-btn-product" class="btn wp-btn-product wBtnNormalDark">選擇</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 估價單 -->
+            <div class="col-lg-4 col-sm-6 wp-product-index">
+                <div class="wp-card">
+                    <h5>商品清單</h5>
+                    <ul id="wpList" class="list-group ">
+
+                    </ul>
+                    <div class="totalPrice">
+                        <h5>
+                            總價
+                            <span class="price">
+                                $3000
+                            </span>
+                        </h5>
+                    </div>
+                    <!-- 按鍵 -->
+                    <div class="d-flex justify-content-center">
+                        <button class="btn wp-button wBtnNPk btn-next">結帳</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        // 選擇後新增li
+        $(document).on('click', '#wp-btn-product', function () {
+            console.log('hi')
+            $("#wpList").append('<div class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></div >');
+        })
+
+        let newsPage = 0;
+
+        $('.wp-arrow .left-arrow').click(function () {
+            console.log('hi')
+            newsPage--;
+            if (newsPage < 0) {
+                newsPage = 2;
+            };
+            $('.wp-wrap').css('left', -230 * newsPage + 'px');
+        })
+        $('.wp-arrow .right-arrow').click(function () {
+            console.log('hi')
+            newsPage++;
+            if (newsPage > 2) {
+                newsPage = 0;
+            };
+            $('.wp-wrap').css('left', -230 * newsPage + 'px');
+        })
+
+        $('.wp-row').odd().addClass('wp-row-p')
+
+    </script>
+
+</body>
+
+</html>

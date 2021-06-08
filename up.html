@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex6</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        /* 下拉式選單 */
+        /* .widget select,
+        .no-widget .select {
+            position: absolute;
+            left: -5000em;
+            height: 0;
+            overflow: hidden;
+        } */
+
+
+        .select {
+            position: relative;
+            display: inline-block;
+        }
+
+        .select .optList {
+            position: absolute;
+            top: 100%;
+            /* left: 0; */
+        }
+
+        .select .optList.hidden {
+            max-height: 0;
+            visibility: hidden;
+        }
+
+        /* .select.active,
+.select:focus {
+    box-shadow: 0 0 3px #4AC8C2;
+    outline: none;
+} */
+
+        .select {
+            font-size: 10px;
+            font-family: Verdana, Arial, sans-serif;
+            padding: 1px 25px 2px 5px;
+            width: 100%;
+            border: 1px solid #9AA3AC;
+            border-radius: 4px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .select .value {
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            vertical-align: top;
+        }
+
+        .select:after {
+            content: "▼";
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+            width: 2em;
+            top: 0;
+            right: 0;
+            padding-top: .1em;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 0 .1em .1em 0;
+            color: #383E44;
+        }
+
+        .select .optList {
+            z-index: 2;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            border: 1px solid #9AA3AC;
+            border-top-width: .1em;
+            border-radius: 0 0 .4em .4em;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            min-width: 100%;
+            max-height: 100px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .select .option {
+            padding: .2em .3em;
+        }
+
+        /* 下拉顏色 */
+        .select .highlight {
+            background: #4AC8C2;
+            color: #FFFFFF;
+        }
+
+        /* ---------------------------------------- */
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+
+
+        <div class="up-table row">
+            <div class="brand">
+                <div class="widget brand">
+                    <select name="brand" id="brand" class="select form-control">
+
+                        <option value="0" class="option">商品名稱</option>
+
+                        <option value="1" class="option">AMD</option>
+                        <option value="2" class="option">INTEL</option>
+                    </select>
+                </div>
+            </div>
+            <div class="productname">
+                <div class="widget productname">
+                    <select name="productname" id="productname" class="form-control select">
+                        <option value="0">商品名稱</option>
+
+                        <option value="1">中正</option>
+                        <option value="2">暖暖</option>
+                        <option value="3">七堵</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------------------------------- -->
+        <div class="up-table row">
+            <div class="item">中央處理器</div>
+            <div class="brand">
+                <form class="widget brand">
+                    <select name="brand" id="brand">
+                        <option value="0">商品名稱</option>
+                        <option value="1">AMD</option>
+                        <option value="2">INTEL</option>
+                    </select>
+                    <div class="select" name="brand" id="brand">
+                        <span class="value"></span>
+                        <ul class="optList hidden">
+                            <li class="option" value="0">商品名稱</li>
+                            <li class="option" value="1">AMD</li>
+                            <li class="option" value="2">INTEL</li>
+                            <li class="option">pro4</li>
+                            <li class="option">pro5</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="productname">
+                <form class="widget productname">
+                    <select name="productname">
+                        <option>商品名稱</option>
+                        <option>pro2</option>
+                        <option>pro3</option>
+                        <option>pro4</option>
+                        <option>pro5</option>
+                    </select>
+                    <div class="select" name="productname" id="productname">
+                        <span class="value">品牌</span>
+                        <ul class="optList hidden">
+                            <li class="option" value="0">商品名稱</li>
+                            <li class="option" value="1">pro2</li>
+                            <li class="option" value="2">pro3</li>
+                            <li class="option">pro4</li>
+                            <li class="option">pro5</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="itemprice">$0</div>
+            <div class="amount">
+                <form class="widget amount">
+                    <select name="amount">
+                        <option>商品名稱</option>
+                        <option>pro2</option>
+                        <option>pro3</option>
+                        <option>pro4</option>
+                        <option>pro5</option>
+                    </select>
+                    <div class="select">
+                        <span class="value">品牌</span>
+                        <ul class="optList hidden">
+                            <li class="option">0</li>
+                            <li class="option">1</li>
+                            <li class="option">2</li>
+                            <li class="option">3</li>
+                            <li class="option">4</li>
+                            <li class="option">5</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="sub price">$0</div>
+            <div class="add" id="add">
+                <span>
+                    <i class="fas fa-plus-circle "></i>
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <form action="">
+                <div class="form-group">
+                    <select name="brand" id="city" class="form-control">
+                        <option value="0">商品名稱</option>
+
+                        <option value="1">AMD</option>
+                        <option value="2">INTEL</option>
+                        <!-- <option value="3">基隆</option> -->
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <select name="productname" id="dist" class="form-control">
+                        <option value="0">商品名稱</option>
+
+                        <option value="1">中正</option>
+                        <option value="2">暖暖</option>
+                        <option value="3">七堵</option>
+                    </select>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        let districtObj = [
+            ['商品名稱'],
+            ['AMD Athlon-3000G 雙核心 中央處理器', 'AMD Ryzen 3-3100 3.6GHz 四核心 中央處理器', 'AMD Ryzen 3 R3-3300X 中央處理器', 'AMD Ryzen 5-3500X 3.6GHz六核心 中央處理器', 'AMD Ryzen 5 R5-3400G 中央處理器'],
+            ['Intel Core i3-10100 中央處理器', 'Intel Core i5-11600KF 中央處理器', 'Intel Core i5-11600K 中央處理器'],
+            // ['七堵', '中正', '暖暖'],
+        ];
+
+
+        $('#brand').change(function () {
+            console.log('hi brand', $(this).val());
+            let selectedCity = $(this).val();
+
+            // Scope 作用域
+            $('#productname option').each(function () {
+
+                console.log('hi productname', districtObj[selectedCity][$(this).val()]);
+                // console.log('hi productname option', $(this).val())
+                $(this).text(districtObj[selectedCity][$(this).val()]);
+            })
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>

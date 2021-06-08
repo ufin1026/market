@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wepickCPU</title>
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
+    <!-- up style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- wp-2.css -->
+    <link rel="stylesheet" href="./wp-3-web.css">
+    <link rel="stylesheet" href="./wp-3-mobile.css" type="text/css"
+        media="only screen and (min-width: 0px) and (max-width: 767px)" />
+    <link rel="stylesheet" href="./up-color.css">
+    <!-- style -->
+    <style>
+        /* 卡片 */
+
+
+        .wp-card {
+            background-color: #FF98C930;
+        }
+
+        .line {
+            background-color: #FF8888;
+        }
+
+        .product-info {
+            height: 110px;
+        }
+
+        .wp-btn-product {
+            background-color: #384449;
+        }
+
+        .wp-product-index {
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            height: 480px;
+        }
+
+
+        .wp-slide {
+            max-width: 660px;
+            height: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .wp-wrap {
+            width: 660px;
+            position: absolute;
+        }
+
+        .wp-row {
+            width: 200px;
+            height: 460px;
+            border-radius: 4px;
+            padding: 20px;
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wp-row:hover {
+            width: 200px;
+            height: 460px;
+            border-radius: 4px;
+            padding: 20px;
+            background-color: #fafafa;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            transition: .5s;
+        }
+
+        .wp-arrow {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            top: 50%;
+            position: absolute;
+            z-index: 3;
+        }
+
+        .arrow {
+            width: 20px;
+        }
+
+        .left-arrow {
+            top: 50%;
+            left: 5%;
+        }
+
+        .right-arrow {
+            top: 50%;
+            right: 5%;
+        }
+
+        /* 商品內容 */
+        .wp-carousel .fas {
+            color: #061127;
+            font-size: 32px;
+        }
+
+        .wp-container {
+            padding-top: 100px;
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        .wp-slide {
+            width: 700px;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .wp-row {
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #f5f6f8;
+            justify-content: center;
+            text-align: center;
+            transition: .5s;
+        }
+
+        .wp-row:hover {
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #f5f6f8;
+        }
+
+        .wp-row p,
+        h5 {
+            line-height: 20px;
+            padding: 0px 0;
+        }
+
+        .wp-row img {
+            width: 100%;
+            border-radius: 4px;
+            padding-bottom: 12px;
+        }
+
+        .wp-button {
+            width: 100px;
+            border-radius: 80px;
+            padding: 8px;
+            margin: 4px;
+            border: none;
+            transition: .3s;
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .wp-button:hover {
+            color: #E4E8EE;
+        }
+
+        .wp-btn-product {
+            width: 80px;
+            border-radius: 16px;
+            background-color: #384449;
+            padding: 8px;
+            margin: 4px;
+            border: none;
+            transition: .3s;
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+            transition: .5s;
+            align-items: end;
+        }
+
+        .wp-btn-product:hover {
+            color: #fff;
+            transition: .5s;
+        }
+
+
+        .wp-btn-product-hover {
+            width: 80px;
+            border-radius: 16px;
+            justify-content: center;
+            text-align: center;
+            transition: .5s;
+            background-color: #384449;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 進度條 -->
+        <div id="wp-progressBar" class="wp-progress">
+            <div class="wp-point">
+                <!-- 對話小尖尖 -->
+                <div class="title-delta title-delta-0">
+                </div>
+                <div class="title title-0">
+                    <span>theme</span>
+                    <br>
+                    <span>主題機</span>
+                </div>
+            </div>
+
+            <div class="wp-point">
+                <!-- 對話小尖尖 -->
+                <div class="title-delta">
+                </div>
+                <div class="title">
+                    <span>CHART</span>
+                    <br>
+                    <span>結帳</span>
+                </div>
+            </div>
+
+            <div class="line-bg wp-design wp-design-bg"></div>
+            <div class="line wp-design wp-design-bg"></div>
+
+        </div>
+        <!-- 內容 -->
+        <div class="wp-container d-flex ">
+            <div class="col-lg-8 col-sm-4">
+                <!-- 商品選單 -->
+                <!-- 箭頭 -->
+                <div class="wp-arrow ">
+                    <div class="arrow left-arrow">
+                        <img src="./icon/angle-left-solid.svg" alt="">
+                    </div>
+                    <div class="arrow right-arrow">
+                        <img src="./icon/angle-right-solid.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="wp-slide CPU">
+                    <div class="d-flex wp-wrap">
+                        <!-- A -->
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="wp-row ">
+                                <img src="./images/AMD01.jpg" alt="">
+                                <h5>A</h5>
+                                <div class="product-info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                                    </p>
+                                </div>
+
+                                <h5 class="price">$1000</h5>
+                                <button id="wp-btn-product" class="btn wp-btn-product wBtnNormalDark">選擇</button>
+                            </div>
+                        </div>
+                        <!-- B -->
+                        <div class="col-lg-4 ">
+                            <div class="wp-row">
+                                <img src="./images/AMD01.jpg" alt="">
+                                <h5>B</h5>
+                                <div class="product-info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                                    </p>
+                                </div>
+
+                                <h5 class="price">$1000</h5>
+                                <button id="wp-btn-product" class="btn wp-btn-product wBtnNormalDark">選擇</button>
+                            </div>
+                        </div>
+                        <!-- C -->
+                        <div class="col-lg-4">
+                            <div class="wp-row">
+                                <img src="./images/AMD01.jpg" alt="">
+                                <h5>C</h5>
+                                <div class="product-info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                                    </p>
+                                </div>
+
+                                <h5 class="price">$1000</h5>
+                                <button id="wp-btn-product" class="btn wp-btn-product wBtnNormalDark">選擇</button>
+                            </div>
+                        </div>
+                        <!-- D -->
+                        <div class="col-lg-4">
+                            <div class="wp-row">
+                                <img src="./images/AMD01.jpg" alt="">
+                                <h5>D</h5>
+                                <div class="product-info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                                    </p>
+                                </div>
+
+                                <h5 class="price">$1000</h5>
+                                <button id="wp-btn-product" class="btn wp-btn-product wBtnNormalDark">選擇</button>
+                            </div>
+                        </div>
+                        <!-- E -->
+                        <div class="col-lg-4">
+                            <div class="wp-row">
+                                <img src="./images/AMD01.jpg" alt="">
+                                <h5>E</h5>
+                                <div class="product-info">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,adipisicin
+                                    </p>
+                                </div>
+
+                                <h5 class="price">$1000</h5>
+                                <button id="wp-btn-product" class="btn wp-btn-product wBtnNormalDark">選擇</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品清單 -->
+            <div class="col-lg-4 col-sm-6">
+                <div class="wp-card">
+                    <h5>商品清單</h5>
+                    <ul id="wpList" class="list-group ">
+                        <!-- <li class="list-group-item d-flex">
+                                    <p class="col-9 my-auto">AMD Athlon™ 3000G</p>
+        
+                                    <h5 class="price col-3 my-auto">$1000</h5>
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <p class="col-9 my-auto">
+                                        HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2/16</p>
+                                    <h5 class="price col-3 my-auto">$1000</h5>
+                                </li> -->
+                    </ul>
+                    <div class="totalPrice card-body ">
+                        <h5>
+                            總價
+                            <span class="price">
+                                $3000
+                            </span>
+                        </h5>
+                    </div>
+                    <!-- 按鍵 -->
+                    <div class="d-flex justify-content-end">
+                        <button class="btn wp-button wBtnNPk btn-next">結帳</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // 商品選單
+        $('.wp-row').hover(function () {
+            $('.wp-btn-product wBtnNormalDark').toggleClass('wp-btn-product wBtnNormalDark-hover')
+        });
+
+        // 選擇後新增li
+        $(document).on('click', '#wp-btn-product', function () {
+            console.log('hi')
+            $("#wpList").append('<div class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></div >');
+        })
+
+        let newsPage = 0;
+        // 品項左右
+        $('.wp-arrow .left-arrow').click(function () {
+            console.log('hi')
+            newsPage--;
+            if (newsPage < 0) {
+                newsPage = 3;
+            };
+            $('.wp-wrap').css('left', -220 * newsPage + 'px');
+        })
+        $('.wp-arrow .right-arrow').click(function () {
+            console.log('hi')
+            newsPage++;
+            if (newsPage > 3) {
+                newsPage = 0;
+            };
+            $('.wp-wrap').css('left', -220 * newsPage + 'px');
+        })
+
+        $('.wp-row').odd().addClass('wp-row-p')
+        $(document).on('click', '#wp-btn-product', function () {
+
+            console.log('hi')
+            index++;
+            if ($("#wpList").find('#wpListCpu').length) {
+                $("#wpListCpu").html('<p class= "col-9 my-auto" > ' + index + 'GGGG FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5>');
+            }
+            else {
+                $("#wpList").append('<div id="wpListCpu" class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></div >');
+            }
+
+        })
+
+        // $(document).on('click', '#wp-btn-product', function () {
+
+        //     console.log('hi')
+        //     index++;
+        //     if ($("#wpList").find('#wpListCpu').length) {
+        //         $("#wpListCpu").html('<p class= "col-9 my-auto" > ' + index + 'GGGG FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5>');
+        //     }
+        //     else {
+        //         $("#wpList").append('<li id="wpListCpu" class="list-group-item d-flex"><p class= "col-9 my-auto" > HyperX FURY DDR4 3200 8G x2 桌上型超頻記憶體 HX432C16FB3K2 / 16 </p><h5 class="price col-3 my-auto">$1000</h5></li >');
+        //     }
+
+        // })
+
+
+
+    </script>
+</body>
+
+</html>

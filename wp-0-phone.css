@@ -43,7 +43,41 @@
    align-items: center;
    /* justify-content: space-around; */
 }
-.wp-originStyle>h2{
+
+.wp-design-hover:hover {
+    background-color: #ff98c930;
+    border-radius: 150px;
+     width: 400px;
+    height: 100px;
+    transition: .8s;
+}
+
+.wp-document-hover:hover {
+    background-color: #BDAAFF30;
+    border-radius: 150px;
+     width: 400px;
+    height: 100px;
+    transition: .5s;
+}
+
+.wp-editing-hover:hover {
+    background-color: #47D5CE30;
+    border-radius: 150px;
+     width: 400px;
+    height: 100px;
+    transition: .5s;
+}
+
+
+.wp-gaming-hover:hover {
+    background-color: #43D3FD30;
+    border-radius: 150px;
+     width: 400px;
+    height: 100px;
+    transition: .5s;
+}
+
+.wp-originStyle h2{
 padding-left: 30px;
 }
 

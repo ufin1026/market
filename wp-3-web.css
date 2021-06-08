@@ -2,13 +2,13 @@
 #wp-progressBar {
     width: 1000px;
     margin: auto;
-    padding-top: 100px;
+    padding-top: 200px;
 }
 
 .wp-progress {
     position: relative;
     width: 100%;
-    height: 120px;
+    height: 160px;
     display: flex;
     flex: wrap;
     justify-content: space-between;
@@ -146,7 +146,7 @@
 }
 
 .wp-row {
-    width: 80px;
+    /* width: 80px; */
     /* height: 400px; */
     padding: 10px;
     border-radius: 16px;
@@ -156,7 +156,7 @@
 }
 
 .wp-row:hover {
-    width: 80px;
+    /* width: 80px; */
     /* height: 400px; */
     padding: 10px;
     border-radius: 4px;

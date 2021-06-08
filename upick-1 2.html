@@ -15,10 +15,190 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./up-color.css">
     <link rel="stylesheet" href="./style_js.js">
-    <link rel="stylesheet" href="upick-web.css">
+    <!-- <link rel="stylesheet" href="upick-web.css"> -->
     <link rel="stylesheet" href="upick-phone.css" type="text/css"
         media="only screen and (min-width: 0px) and (max-width: 767px)" />
     <style>
+        /* 下拉選單 */
+
+        .select {
+            position: relative;
+            display: inline-block;
+        }
+
+        .select {
+            font-size: 10px;
+            font-family: Verdana, Arial, sans-serif;
+            padding: 1px 25px 2px 5px;
+            width: 100%;
+            border: 1px solid #9AA3AC;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        .up-container {
+            padding-top: 200px;
+        }
+
+        .up-table-frame {
+            height: 600px;
+            overflow-y: scroll;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .up-table-title {
+            background-color: #9AA3AC;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px 16px;
+            border-radius: 4px 4px 0 0;
+            position: sticky;
+        }
+
+        .up-table-subtitle {
+            background-color: #E4E8EE;
+            color: #4AC8C2;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px 16px;
+        }
+
+        .up-table {
+            background-color: #fff;
+            color: #383E44;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .up-table:hover {
+            background-color: #f5f6f8;
+        }
+
+        .item {
+            width: 80px;
+            margin: 4px;
+        }
+
+        .brand {
+            width: 80px;
+            margin: auto;
+        }
+
+        .productname {
+            width: 300px;
+            margin: auto;
+        }
+
+        .itemprice {
+            width: 60px;
+            margin: auto;
+        }
+
+        .amount {
+            width: 50px;
+            margin: auto;
+        }
+
+        .sub {
+            width: 60px;
+            margin: auto;
+        }
+
+        .add {
+            width: 10px;
+            margin: auto;
+        }
+
+        /* upick-2 */
+
+        /* 商品清單 */
+        .up-card {
+            border-radius: 4px;
+            padding: 16px;
+            background-color: #E4E8EE;
+            margin-left: 10px;
+        }
+
+        .up-list-group {
+            height: 420px;
+            overflow-y: scroll;
+        }
+
+        /* 按鍵 */
+        .wp-button {
+            width: 100px;
+            border-radius: 80px;
+            padding: 8px;
+            border: none;
+            transition: .3s;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0 10px;
+        }
+
+        .up-productlist {
+            border: 1px solid #E4E8EE;
+            border-radius: 4px;
+            padding: 16px;
+            /* background-color: #E4E8EE; */
+            margin-left: 10px;
+        }
+
+        .up-productlist-title {
+            color: #E4E8EE;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .up-productlist-product {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 5px 20px;
+        }
+
+        .up-productlist-product p {
+            color: #E4E8EE;
+        }
+
+        .up-productlist-totleprice {
+            color: #E4E8EE;
+        }
+
+        .wWhitePgAreaHTML9 {
+            z-index: 10;
+            position: absolute;
+            top: 30%;
+            left: 25%;
+            /* display: none; */
+            width: 300px;
+        }
+
+        .cover {
+            background: #000;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            filter: blur(2px);
+            opacity: 0.5;
+            /* display: none; */
+            z-index: 2
+        }
+
+        .fa-copy {
+            color: #383E44;
+        }
+
         .up-footer {
             width: 100%;
             height: 80px;
@@ -129,67 +309,40 @@
             <div class="up-table row">
                 <div class="item">中央處理器</div>
                 <div class="brand">
-                    <form class="widget brand">
-                        <select name="brand" id="brand">
-                            <option value="0">商品名稱</option>
-                            <option value="1">AMD</option>
-                            <option value="2">INTEL</option>
+                    <div class="widget brand">
+                        <select name="brand" id="brand" class="select form-control">
+
+                            <option value="0" class="option">品牌</option>
+
+                            <option value="1" class="option">AMD</option>
+                            <option value="2" class="option">INTEL</option>
                         </select>
-                        <div class="select" name="brand" id="brand">
-                            <span class="value"></span>
-                            <ul class="optList hidden">
-                                <li class="option" value="0">商品名稱</li>
-                                <li class="option" value="1">AMD</li>
-                                <li class="option" value="2">INTEL</li>
-                                <li class="option">pro4</li>
-                                <li class="option">pro5</li>
-                            </ul>
-                        </div>
-                    </form>
+                    </div>
                 </div>
                 <div class="productname">
-                    <form class="widget productname">
-                        <select name="productname">
-                            <option>商品名稱</option>
-                            <option>pro2</option>
-                            <option>pro3</option>
-                            <option>pro4</option>
-                            <option>pro5</option>
+                    <div class="widget productname">
+                        <select name="productname" id="productname" class="form-control select">
+                            <option value="0">商品名稱</option>
+
+                            <option value="1">中正</option>
+                            <option value="2">暖暖</option>
+                            <option value="3">七堵</option>
                         </select>
-                        <div class="select" name="productname" id="productname">
-                            <span class="value">品牌</span>
-                            <ul class="optList hidden">
-                                <li class="option" value="0">商品名稱</li>
-                                <li class="option" value="1">pro2</li>
-                                <li class="option" value="2">pro3</li>
-                                <li class="option">pro4</li>
-                                <li class="option">pro5</li>
-                            </ul>
-                        </div>
-                    </form>
+                    </div>
                 </div>
                 <div class="itemprice">$0</div>
                 <div class="amount">
-                    <form class="widget amount">
-                        <select name="amount">
-                            <option>商品名稱</option>
-                            <option>pro2</option>
-                            <option>pro3</option>
-                            <option>pro4</option>
-                            <option>pro5</option>
+                    <div class="widget amount">
+                        <select name="brand" id="amount" class="select form-control">
+
+                            <option value="0" class="option">0</option>
+
+                            <option value="1" class="option">1</option>
+                            <option value="2" class="option">2</option>
+                            <option value="3" class="option">3</option>
+                            <option value="4" class="option">4</option>
                         </select>
-                        <div class="select">
-                            <span class="value">品牌</span>
-                            <ul class="optList hidden">
-                                <li class="option">0</li>
-                                <li class="option">1</li>
-                                <li class="option">2</li>
-                                <li class="option">3</li>
-                                <li class="option">4</li>
-                                <li class="option">5</li>
-                            </ul>
-                        </div>
-                    </form>
+                    </div>
                 </div>
                 <div class="sub price">$0</div>
                 <div class="add" id="add">

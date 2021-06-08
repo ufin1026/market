@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- boostrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
@@ -129,44 +129,44 @@
             <div class="up-table row">
                 <div class="item">中央處理器</div>
                 <div class="brand">
-                    <form class="widget brand">
-                        <select name="brand" id="brand">
+                    <div class="brand form-group">
+                        <select name="city" id="city" class="form-control widget brand">
                             <option value="0">商品名稱</option>
+
                             <option value="1">AMD</option>
                             <option value="2">INTEL</option>
+
                         </select>
                         <div class="select" name="brand" id="brand">
                             <span class="value"></span>
                             <ul class="optList hidden">
-                                <li class="option" value="0">商品名稱</li>
+                                <li class="option" value="0">品牌</li>
                                 <li class="option" value="1">AMD</li>
-                                <li class="option" value="2">INTEL</li>
+                                <li class="option" value="2">Intel</li>
                                 <li class="option">pro4</li>
                                 <li class="option">pro5</li>
                             </ul>
                         </div>
-                    </form>
+                    </div>
                 </div>
-                <div class="productname">
-                    <form class="widget productname">
-                        <select name="productname">
-                            <option>商品名稱</option>
-                            <option>pro2</option>
-                            <option>pro3</option>
-                            <option>pro4</option>
-                            <option>pro5</option>
-                        </select>
-                        <div class="select" name="productname" id="productname">
-                            <span class="value">品牌</span>
-                            <ul class="optList hidden">
-                                <li class="option" value="0">商品名稱</li>
-                                <li class="option" value="1">pro2</li>
-                                <li class="option" value="2">pro3</li>
-                                <li class="option">pro4</li>
-                                <li class="option">pro5</li>
-                            </ul>
-                        </div>
-                    </form>
+                <div class="productname form-group">
+                    <select name="dist" id="dist" class="form-control">
+                        <option value="0">商品名稱</option>
+
+                        <option value="1">中正</option>
+                        <option value="2">暖暖</option>
+                        <option value="3">七堵</option>
+                    </select>
+                    <div class="select" name="productname" id="productname">
+                        <span class="value"></span>
+                        <ul class="optList hidden">
+                            <li class="option" value="0">品牌</li>
+                            <li class="option" value="1">AMD</li>
+                            <li class="option" value="2">Intel</li>
+                            <li class="option">pro4</li>
+                            <li class="option">pro5</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="itemprice">$0</div>
                 <div class="amount">
@@ -203,14 +203,15 @@
                 <div class="item">主機板 MB</div>
                 <div class="brand">
                     <form class="widget brand">
-                        <select name="brand">
-                            <option>商品名稱</option>
-                            <option>pro2</option>
-                            <option>pro3</option>
-                            <option>pro4</option>
-                            <option>pro5</option>
+                        <select class="select" name="city" id="city">
+                            <span class="value">
+                                <option value="0">商品名稱</option>
+                                <option value="1">pro2</option>
+                                <option value="2">pro3</option>
+                                <option>pro4</option>
+                                <option>pro5</option>
                         </select>
-                        <div class="select">
+                        <!-- <div class="select">
                             <span class="value"></span>
                             <ul class="optList hidden">
                                 <li class="option">品牌</li>
@@ -219,7 +220,7 @@
                                 <li class="option">pro4</li>
                                 <li class="option">pro5</li>
                             </ul>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
                 <div class="productname">
@@ -1417,7 +1418,21 @@
         ];
 
 
-        $('#brand').change(function () {
+        $('#city').change(function () {
+            console.log('hi city', $(this).val());
+            let selectedCity = $(this).val();
+
+            // Scope 作用域
+            $('#dist option').each(function () {
+
+                console.log('hi dist', districtObj[selectedCity][$(this).val()]);
+                // console.log('hi productname option', $(this).val())
+                $(this).text(districtObj[selectedCity][$(this).val()]);
+            })
+        })
+
+
+        $('#brand').click(function () {
             console.log('hi brand', $(this).val());
             let selectedCity = $(this).val();
 
@@ -1431,6 +1446,8 @@
 
 
         })
+
+
 
     </script>
 </body>

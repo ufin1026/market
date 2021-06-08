@@ -8,10 +8,6 @@
     text-decoration: none;
 }
 
-.wp-title {
-    color: #FF2181;
-    letter-spacing: 20px;
-}
 
 /* 繪圖設計 */
 .wp-design {
@@ -32,6 +28,8 @@
 .wp-gaming {
     color: #43D3FD;
 }
+
+
 
 .wp-0-container {
     display: flex;
